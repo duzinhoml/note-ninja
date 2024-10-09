@@ -74,24 +74,25 @@ main {
     transition: 1s;
 }
 
-#randomQuote {
-    color: white;
-    white-space: nowrap;
-    animation: scroll 35s linear infinite;
-    font-size: 18px;
-    font-style: italic;
-    position:relative;
-    top: 70px;
-    background-color: #f15152;
-    font-size: 15px;
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 10s forwards;
 }
 
-@keyframes scroll {
-    0% {
-        transform:translateX(100%);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    100% {transform: translateX(-100%);
+    to {
+        opacity: 1;
     }
+}
+#randomQuote {
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    padding-top: 80px;
 }
 
 .what-subject {
