@@ -19,6 +19,7 @@ header {
 }
 
 .nav-bar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,17 +27,20 @@ header {
 }
 
 h1 {
+    display: inline-block;
     transition: 1s;
+    font-size: 20px;
 }
 
 .nav-bar #ninja-logo {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background-color: #887d29;
 }
 
 ul {
     list-style-type: none;
+    display: inline-block;
 }
 
 ul li {
@@ -113,7 +117,7 @@ ul li:hover ul.dropdown {
 a {
     text-decoration: none;
     color: #D8D5DB;
-} */
+}*/
 
 main {
     background-color: grey;

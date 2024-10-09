@@ -16,7 +16,7 @@ const motivationQu = [
 function selectRandomQuote() {
     const randomIndex = Math.floor(Math.random() * motivationQu.length);
     const selectedQuote = motivationQu [randomIndex]; 
-    document.getElementById('randomQuote').innerText = selectedQuote
+    document.getElementById('randomQuote').innerText = selectedQuote;
 }
 
 selectRandomQuote();
@@ -29,25 +29,27 @@ const subjects = ["HTML", "CSS", "JavaScript", "Web API", "GitHub"];
 
 function listSubjects() {
     for (let x = 0; x < subjects.length; x++) {
-        console.log(subjects[0]);
+        console.log(subjects[x]);
     }
 }
 
 function generateSubject() {
-    if (subjects === "HTML") {
+    const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
+
+    if (randomSubject === "HTML") {
         console.log("HTML")
         document.getElementById("what-subject").innerHTML = "HTML";
-    } else if (subjects === "CSS") {
+    } else if (randomSubject === "CSS") {
         document.getElementById("what-subject").innerHTML = "CSS";
-    } else if (subjects === "JavaScript") {
+    } else if (randomSubject === "JavaScript") {
         document.getElementById("what-subject").innerHTML = "JavaScript";
-    } else if (subjects === "Web API") {
+    } else if (randomSubject === "Web API") {
         document.getElementById("what-subject").innerHTML = "Web API";
-    } else if (subjects === "GitHub") {
+    } else if (randomSubject === "GitHub") {
         document.getElementById("what-subject").innerHTML = "GitHub";
     } else {
         document.getElementById("what-subject").innerHTML = "Please try again!";
     }
 }
+
 listSubjects();
-generateSubject();
