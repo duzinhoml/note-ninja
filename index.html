@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Note Ninja</title>
   </head>
@@ -14,7 +17,11 @@
     <header>
       <!-- Nav Bar -->
       <nav class="nav-bar">
-        <h1>Note Ninja</h1>
+        <h1 class="logo">Note Ninja</h1>
+        <img
+          id="ninja-logo"
+          src="https://parttimeninja78.wordpress.com/wp-content/uploads/2020/05/cropped-kisspng-ninja-computer-programming-learning-study-skills-avatar-5acd61df6f5765.9129322315234093754561-3.png"
+        />
         <ul>
           <li><a href="#">Link-1</a></li>
           <li><a href="#">Link-2</a></li>
@@ -25,20 +32,21 @@
               <a href="#">Sub-Link-2</a>
               <a href="#">Sub-Link-2</a>
             </div>
-          </li> -->      
+          </li> -->
         </ul>
       </nav>
     </header>
 
-<!-- Main -->
+    <!-- Main -->
     <main>
-      <div class="randomQuoteBG">
-        <p id="randomQuote"></p>
-      </div>
-       <div class="main-top">
-        <img id="ninja-logo" src="https://parttimeninja78.wordpress.com/wp-content/uploads/2020/05/cropped-kisspng-ninja-computer-programming-learning-study-skills-avatar-5acd61df6f5765.9129322315234093754561-3.png">
+      <p id="randomQuote"></p>
+      <div class="main-top">
+        <img
+          id="ninja-logo"
+          src="https://parttimeninja78.wordpress.com/wp-content/uploads/2020/05/cropped-kisspng-ninja-computer-programming-learning-study-skills-avatar-5acd61df6f5765.9129322315234093754561-3.png"
+        />
         <div class="subject-generator">
-        <!-- Generated subject appears here-->
+          <!-- Generated subject appears here-->
           <div class="what-subject">
             <p>What Subject Should You Study Today?</p>
           </div>
@@ -46,37 +54,39 @@
             <button>Random Subject</button>
           </div>
         </div>
-       </div>
-
-
-<section class="container">
-  <div class="row">
-    <div class="column">
-      <div class="card">
-       <h2>Flashcards</h2>
-       <p>Boost your memory to ace your exams with unlimited free flashcards for studying!</p>
       </div>
-      <button class="button flashcards">Flashcards</button>
-    </div>
 
-  <div class="column">
-    <div class="card">
-      <h2>Study Group Sessions</h2>
-      <p>Meet, chat and study 24/7</p>
-    </div>
-    <button class="button studygroups">StudyGroups</button>
-  </div>
+      <section class="container">
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <h2>Flashcards</h2>
+              <p>
+                Boost your memory to ace your exams with unlimited free
+                flashcards for studying!
+              </p>
+            </div>
+            <button class="button flashcards">Flashcards</button>
+          </div>
 
-  <div class="column">
-    <div class="card">
-      <h2>Notes</h2>
-      <p>From chaos to clarity</p>
-      <p>Your notes all in one place</p>
-    </div>
-    <button class="button notes">Notes</button>
-  </div>
-</div>
-</section>
+          <div class="column">
+            <div class="card">
+              <h2>Study Group Sessions</h2>
+              <p>Meet, chat and study 24/7</p>
+            </div>
+            <button class="button studygroups">StudyGroups</button>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <h2>Notes</h2>
+              <p>From chaos to clarity</p>
+              <p>Your notes all in one place</p>
+            </div>
+            <button class="button notes">Notes</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="/assets/main.js"></script>

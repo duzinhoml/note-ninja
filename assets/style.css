@@ -11,10 +11,11 @@ html {
 header {
     color: #D8D5DB;
     background-color: #171717;
-    padding: 10px 20px 0;
+    padding: 10px 20px;
     font-size: 20px;
     width: 100%;
     position: fixed;
+    z-index: 999;
 }
 
 .nav-bar {
@@ -28,14 +29,26 @@ h1 {
     transition: 1s;
 }
 
+.nav-bar #ninja-logo {
+    width: 50px;
+    height: 50px;
+    background-color: #887d29;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
 li {
-    display: inline;
-    text-align: right;
-    padding: 15.7px 20px;
+    padding: 2px 5px;
+    list-style-type: none;
+    margin-left: 10px;
 }
 
 li:hover {
     background-color: #f15152;
+    border-radius: 10px;
 }
 
 a {
@@ -45,23 +58,20 @@ a {
 
 main {
     background-color: grey;
+    width: 100%;
 }
 
 #ninja-logo {
     width: 100px;
     height: 100px;
-    border: 4px outset #D8D5DB;
+    border: 4px double #D8D5DB;
     border-radius: 60px;
     padding: 10px;
 }
 
 .main-top #ninja-logo {
-    transform: translate(10px, 10px);
+    transform: translate(10px, 85px);
     transition: 1s;
-}
-
-.randomQuoteBG {
-    background-color: #f15152;
 }
 
 #randomQuote {
@@ -71,7 +81,7 @@ main {
     font-size: 18px;
     font-style: italic;
     position:relative;
-    top: 55.5px;
+    top: 70px;
     background-color: #f15152;
     font-size: 15px;
 }
@@ -86,7 +96,7 @@ main {
 
 .what-subject {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 180px;
     font-size: 40px;
 }
 
@@ -97,6 +107,10 @@ main {
 .subject-btn button {
     padding: 5px 20px;
     margin-bottom: 30px;
+    background-color: #D8D5DB;
+    border: 5px outset #f15152;
+    border-radius: 20px;
+    font-weight: 600;
 }
 
 .column {
