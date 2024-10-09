@@ -29,7 +29,7 @@ header {
 h1 {
     display: inline-block;
     transition: 1s;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .nav-bar #ninja-logo {
@@ -82,6 +82,7 @@ ul li ul.dropdown li a:hover {
     color: #FFD700;
 }
 
+/*WILL LIKELY BE REMOVED*/
 /*ul {
     display: flex;
     flex-direction: row;
@@ -122,6 +123,9 @@ a {
 main {
     background-color: grey;
     width: 100%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png");
+    background-size: 100%;
+    background-position: 50%;
 }
 
 #ninja-logo {
@@ -155,26 +159,41 @@ main {
     font-size: 20px;
     font-style: italic;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 70px;
+    background-color: #454545;
+    border-bottom: 5px groove #f15152;
+    border-radius: 5px;
 }
 
 #what-subject {
+    padding-top: 10px;
     text-align: center;
     margin-bottom: 180px;
     font-size: 40px;
+    font-weight: 500;
+}
+
+#what-subject p {
+    display: inline;
+    background-color: rgb(161, 161, 161);
+    border: 3px outset white;
+    border-radius: 10px;
+    padding: 3px 10px;
 }
 
 .subject-btn {
     text-align: center;
+    transform: scale(1.3);
 }
 
 .subject-btn button {
-    padding: 30px 20px;
+    padding: 25px 20px;
     margin-bottom: 30px;
     background-color: #dabd19;
     border: 5px outset #bba213;
     border-radius: 60px;
     font-weight: 600;
+    font-family: "Spectral";
 }
 
 .subject-btn button:hover {

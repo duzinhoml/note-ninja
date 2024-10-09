@@ -36,8 +36,8 @@ function listSubjects() {
 function generateSubject() {
     const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
 
-    if (randomSubject === "HTML") {
-        console.log("HTML")
+    // WILL LIKELY BE REMOVED
+    /*if (randomSubject === "HTML") {
         document.getElementById("what-subject").innerHTML = "HTML";
     } else if (randomSubject === "CSS") {
         document.getElementById("what-subject").innerHTML = "CSS";
@@ -50,6 +50,10 @@ function generateSubject() {
     } else {
         document.getElementById("what-subject").innerHTML = "Please try again!";
     }
+    document.getElementById("what-subject").classList.add("highlight");
+}*/
+
+document.getElementById("what-subject").innerHTML = `<p class='generate-subject'>${randomSubject}</p>`;
 }
 
 listSubjects();
