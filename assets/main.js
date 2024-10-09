@@ -25,12 +25,17 @@ setInterval(selectRandomQuote, 86400000);
 
 
 // Subject Generator
+const subjects = ["HTML", "CSS", "JavaScript", "Web API", "GitHub"];
 
-
-let subjects = ["HTML", "CSS", "JavaScript", "Web API" "GitHub"]
+function listSubjects() {
+    for (let x = 0; x < subjects.length; x++) {
+        console.log(subjects[0]);
+    }
+}
 
 function generateSubject() {
     if (subjects === "HTML") {
+        console.log("HTML")
         document.getElementById("what-subject").innerHTML = "HTML";
     } else if (subjects === "CSS") {
         document.getElementById("what-subject").innerHTML = "CSS";
@@ -44,5 +49,5 @@ function generateSubject() {
         document.getElementById("what-subject").innerHTML = "Please try again!";
     }
 }
-
+listSubjects();
 generateSubject();
