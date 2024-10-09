@@ -22,3 +22,27 @@ function selectRandomQuote() {
 selectRandomQuote();
 
 setInterval(selectRandomQuote, 86400000);
+
+
+// Subject Generator
+
+
+let subjects = ["HTML", "CSS", "JavaScript", "Web API" "GitHub"]
+
+function generateSubject() {
+    if (subjects === "HTML") {
+        document.getElementById("what-subject").innerHTML = "HTML";
+    } else if (subjects === "CSS") {
+        document.getElementById("what-subject").innerHTML = "CSS";
+    } else if (subjects === "JavaScript") {
+        document.getElementById("what-subject").innerHTML = "JavaScript";
+    } else if (subjects === "Web API") {
+        document.getElementById("what-subject").innerHTML = "Web API";
+    } else if (subjects === "GitHub") {
+        document.getElementById("what-subject").innerHTML = "GitHub";
+    } else {
+        document.getElementById("what-subject").innerHTML = "Please try again!";
+    }
+}
+
+generateSubject();
