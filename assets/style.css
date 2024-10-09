@@ -52,7 +52,7 @@ main {
     height: 100px;
     border: 4px outset #D8D5DB;
     border-radius: 60px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .main-top #ninja-logo {
@@ -126,13 +126,6 @@ main {
     font-size: 15px;
     margin: 4px 2px; 
     cursor: pointer;
-}
-.flashcards {
-    border 
-}
-.flashcards:hover {
-    border-color: #f15152;
-     color: #black; 
 }
 
 
