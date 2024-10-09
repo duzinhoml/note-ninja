@@ -34,17 +34,9 @@
     <main>
        <div class="main-top">
         <img id="ninja-logo" src="https://parttimeninja78.wordpress.com/wp-content/uploads/2020/05/cropped-kisspng-ninja-computer-programming-learning-study-skills-avatar-5acd61df6f5765.9129322315234093754561-3.png">
-        <div id="randomQuote"></div>
-        <div class="subject-generator">
-        <!-- Generated subject appears here-->
-          <div class="what-subject">
-            <p>What Subject Should You Study Today?</p>
-          </div>
-          <div class="subject-btn">
-            <button>Random Subject</button>
-          </div>
-        </div>
        </div>
+       <div id="randomQuote"></div>
+       <div class="subject-generator">
 
 
 <section class="container">
@@ -52,15 +44,12 @@
     <div class="column">
       <div class="card">
        <h2>Flashcards</h2>
-    
-       <p>Boost your memory to ace your exams with unlimited free flashcards for studying!</p>
       </div>
     </div>
 
   <div class="column">
     <div class="card">
       <h2>Study Group Sessions</h2>
-      <p>Meet, chat and study 24/7!!</p>
     </div>
   </div>
 
