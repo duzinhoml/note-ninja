@@ -26,6 +26,13 @@
           <li><a href="#">Link-1</a></li>
           <li><a href="#">Link-2</a></li>
           <li><a href="#">Link-3</a></li>
+          <li>
+            <a href="#">Profile</a>
+            <ul class="dropdown">
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </li>
           <!-- <li><a href="#">Drop Down</a>
             <div class="drop-btn">
               <a href="#">Sub-link-1</a>
@@ -47,11 +54,11 @@
         />
         <div class="subject-generator">
           <!-- Generated subject appears here-->
-          <div class="what-subject">
+          <div id="what-subject">
             <p>What Subject Should You Study Today?</p>
           </div>
           <div class="subject-btn">
-            <button>Random Subject</button>
+            <button onclick="generateSubject()">Random<br />Subject</button>
           </div>
         </div>
       </div>

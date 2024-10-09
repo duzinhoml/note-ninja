@@ -36,6 +36,49 @@ h1 {
 }
 
 ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+ul li ul.dropdown li {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background-color: #f15152;
+}
+
+ul li a:hover {
+    background-color: #f15152;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul li ul.dropdown li a:hover {
+    color: #FFD700;
+}
+
+/*ul {
     display: flex;
     flex-direction: row;
 }
@@ -46,15 +89,31 @@ li {
     margin-left: 10px;
 }
 
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background-color: #f15152;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
 li:hover {
     background-color: #f15152;
     border-radius: 10px;
 }
 
+ul li:hover ul.dropdown {
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: #D8D5DB;
-}
+} */
 
 main {
     background-color: grey;
@@ -95,7 +154,7 @@ main {
     padding-top: 80px;
 }
 
-.what-subject {
+#what-subject {
     text-align: center;
     margin-bottom: 180px;
     font-size: 40px;
@@ -106,12 +165,17 @@ main {
 }
 
 .subject-btn button {
-    padding: 5px 20px;
+    padding: 30px 20px;
     margin-bottom: 30px;
-    background-color: #D8D5DB;
-    border: 5px outset #f15152;
-    border-radius: 20px;
+    background-color: #dabd19;
+    border: 5px outset #bba213;
+    border-radius: 60px;
     font-weight: 600;
+}
+
+.subject-btn button:hover {
+    background-color: #eacb1b;
+    cursor: pointer;
 }
 
 .column {
