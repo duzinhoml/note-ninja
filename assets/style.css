@@ -64,8 +64,16 @@ li, a, .btn button {
 .btn button:hover {
     background-color: rgba(241, 81, 82, 0.8);
 }
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+    width: 100%;
+}
 
-/*header {
+header {
     color: #D8D5DB;
     background-color: #171717;
     padding: 10px 20px;
@@ -75,30 +83,25 @@ li, a, .btn button {
     z-index: 998;
 }
 
-/* .nav-bar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 25px;
-} */
+
 
 h1 {
     display: inline-block;
     transition: 1s;
     font-size: 30px;
-}*/
+}
+  
 
 /*.nav-bar #ninja-logo {
     width: 48px;
     height: 48px;
     background-color: #887d29;
-}*/
+}
 
 /*ul {
     list-style-type: none;
     display: inline-block;
-} */
+} 
 
 /* ul li {
     display: inline-block;
