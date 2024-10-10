@@ -278,6 +278,7 @@ main {
     padding: 40px;
     background-color: #f15152;
     display: inline-block;
+    top: 500px;
 }
 
 /* .button {
