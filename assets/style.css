@@ -75,13 +75,13 @@ li, a, .btn button {
     z-index: 998;
 }
 
-.nav-bar {
+/* .nav-bar {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 25px;
-}
+} */
 
 h1 {
     display: inline-block;
@@ -98,28 +98,28 @@ h1 {
 /*ul {
     list-style-type: none;
     display: inline-block;
-}
+} */
 
-ul li {
+/* ul li {
     display: inline-block;
     position: relative;
 }
 
 ul li a {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: white;
     text-decoration: none;
     text-align: center;
-}
+} */
 
-ul li ul.dropdown li {
+/* ul li ul.dropdown li {
     display: block;
     font-size: 16px;
     font-weight: 700;
-}
+} */
 
-ul li ul.dropdown {
+/* ul li ul.dropdown {
     width: 100%;
     position: absolute;
     z-index: 999;
@@ -183,6 +183,7 @@ main {
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png");
     background-size: 100%;
     background-position: 50%;
+    padding-top: 150px;
 }
 
 /* LIKELY TO BE DELETED*/
@@ -214,24 +215,22 @@ main {
 }
 #randomQuote {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-style: italic;
-    text-align: center;
-    padding-top: 70px;
-    background-color: #454545;
-    border-bottom: 5px groove #f15152;
+    text-align: left;
+    padding-right: 75px;
     border-radius: 5px;
 }
 
-#what-subject {
+/* #what-subject {
     padding-top: 10px;
     text-align: center;
     margin-bottom: 180px;
     font-size: 40px;
     font-weight: 500;
-}
+} */
 
-#what-subject p {
+/* #what-subject p {
     display: inline;
     background-color: rgb(161, 161, 161);
     border: 3px outset white;
@@ -257,9 +256,9 @@ main {
 .subject-btn button:hover {
     background-color: #eacb1b;
     cursor: pointer;
-}
+} */
 
-.column {
+/* .column {
     float: left;
     width: 33%;
     padding: 80px;
@@ -267,17 +266,18 @@ main {
     font-size: 30px;
     cursor: pointer;
     color: white;
-}
+} */
 
-.row {margin: 0 5px;}
+/* .row {margin: 0 5px;} */
 
 .card {
     box-shadow: 0 20px 5px 0;
     padding: 40px;
     background-color: #f15152;
+    display: inline-block;
 }
 
-.button {
+/* .button {
     border: none;
     color: rgb(18, 15, 15);
     padding: 20px 35px;
@@ -286,7 +286,13 @@ main {
     font-size: 15px;
     margin: 4px 2px; 
     cursor: pointer;
+} */
+
+.btn {
+    background-color: black;
 }
-
-
+.btn:hover {
+    background-color: white;
+    color: black;
+}
 

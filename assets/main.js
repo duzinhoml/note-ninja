@@ -1,5 +1,4 @@
 const motivationQu = [
-    `"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." —Malcolm X`,
     `"The beautiful thing about learning is that no one can take it away from you." —B.B. King`,
     `"The mind is not a vessel to be filled but a fire to be ignited." —Plutarch`,
     `"A person who never made a mistake never tried anything new." —Albert Einstein`,
