@@ -64,8 +64,8 @@ li, a, .btn button {
 .btn button:hover {
     background-color: rgba(241, 81, 82, 0.8);
 }
+
 .navbar {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,9 +80,9 @@ header {
     font-size: 20px;
     width: 100%;
     position: fixed;
-    z-index: 998;
+    z-index: 999;
+    height: 120px;
 }
-
 
 
 h1 {
@@ -186,7 +186,7 @@ main {
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png");
     background-size: 100%;
     background-position: 50%;
-    padding-top: 150px;
+    padding-top: 170px;
 }
 
 /* LIKELY TO BE DELETED*/
