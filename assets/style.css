@@ -35,10 +35,18 @@ header {
     font-size: 40px;
     font-family: "Spectral";
     cursor: default;
+    animation-name: brandName;
+    animation-duration: 2s;
 }
 
 .logoText:hover, .logoText:focus {
     color: var(--red);
+}
+
+@keyframes brandName {
+    0% {color: var(--grey);}
+    25% {color: var(--red);}
+    75% {color: var(--grey);}
 }
 
 .liText:hover, .liText:focus {
@@ -66,7 +74,6 @@ header {
     font-size: 20px;
     font-style: italic;
     text-align: center;
-    padding-right: 75px;
     border-radius: 5px;
     margin-bottom: 0;
     font-family: "Spectral";
