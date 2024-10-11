@@ -1,8 +1,16 @@
+:root {
+    --black: #171717;
+    --grey: #D8D5DB;
+    --red: #f15152;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Header */
 
 header {
     position: fixed;
@@ -10,44 +18,34 @@ header {
     z-index: 999;
 }
 
+/* Nav Bar */
+
 .ourNav {
-    background-color: #171717!important;
+    background-color: var(--black)!important;
 }
 
 .navText {
-    color: #D8D5DB;
+    color: var(--grey);
     font-size: 20px;
     font-family: "Spectral";
     cursor: pointer;
 }
 
-.navText:hover {
-    color: #f15152;
-}
-
-.liText:hover {
-    color: rgba(216, 213, 219, 0.8);
-}
-
 .logoText {
     font-size: 40px;
     font-family: "Spectral";
-    cursor:default;
+    cursor: default;
 }
 
-.poolText {
-    cursor: pointer;
+.logoText:hover, .logoText:focus {
+    color: var(--red);
 }
 
-.ourCard {
-    background-color: #f15152;
-    padding: 2%;
-    margin: auto;
+.liText:hover, .liText:focus {
+    color: rgba(216, 213, 219, 0.8);
 }
 
-.ourBtn {
-    background-color: #171717;
-}
+/* Motivational Quote */
 
 .fade-in {
     opacity: 0;
@@ -64,7 +62,7 @@ header {
 }
 
 #randomQuote {
-    color: #171717;
+    color: var(--black);
     font-size: 20px;
     font-style: italic;
     text-align: center;
@@ -75,7 +73,7 @@ header {
 }
 
 .quoteBackground {
-    background-color: #D8D5DB;
+    background-color: var(--grey);
 }
 
 #dojo {
@@ -86,8 +84,11 @@ header {
     padding-bottom: 50px;
 }
 
+/* Modal */
+
+/* Modal Button in Nav */
 .modal-btn {
-    color: #171717;
+    color: var(--black);
     background-color: #dabd19;
     border: 3px outset rgba(187, 162, 19, 1);
     border-radius: 60px;
@@ -98,13 +99,41 @@ header {
 .modal-btn:hover {
     background-color: #eacb1b;
     border: 3px outset rgba(187, 162, 19, 0.8);
-    color: #171717;
+    color: var(--black);
 }
 
-.modal-btn:focus {
-    color: #171717;
-    background-color: #dabd19;
-    border: 3px outset rgba(187, 162, 19, 1);
+.modal-btn:active {
+    color: var(--black)!important;
+    background-color: #dabd19!important;
+    border: 3px outset rgba(187, 162, 19, 1)!important;
+}
+
+/* Modal Pop-Up */
+.modal-bg {
+    background-color: #292929;
+}
+
+.border-head {
+    border-bottom: 1px solid #171717;
+}
+
+.btn-close:active {
+    box-shadow: 3px 3px hsl(0, 0%, 18%), -3px -3px hsl(0, 0%, 18%), 3px -3px hsl(0, 0%, 18%), -3px 3px hsl(0, 0%, 18%);
+    border-radius: 8px;
+}
+
+.btn-close:focus {
+    box-shadow: 3px 3px hsl(0, 0%, 18%), -3px -3px hsl(0, 0%, 18%), 3px -3px hsl(0, 0%, 18%), -3px 3px hsl(0, 0%, 18%);
+    border-radius: 8px;
+}
+
+.border-foot {
+    border-top: 1px solid #171717;
+}
+
+.modal-title, .modal-body {
+    color: var(--grey);
+    font-family: "Spectral";
 }
 
 #modal-close {
@@ -123,18 +152,78 @@ header {
     border: 3px outset rgba(110, 117, 124, 0.5);
 }
 
-#modal-understood {
+.modal-next {
     background-color: #f15152;
-    border: 3px outset rgba(241, 81, 82, 0.5);
+    border: 3px outset rgba(193, 63, 63, 0.5);
     font-family: "Spectral";
 }
 
-#modal-understood:hover {
+.modal-next:hover {
     background-color: #d64747;
-    border: 3px outset #f1515280;
+    border: 3px outset #d8494980;
 }
 
-#modal-understood:focus {
+.modal-next:active {
+    background-color: #f15152!important;
+    border: 3px outset rgba(193, 63, 63, 0.5)!important;
+}
+
+.modal-next:focus {
     background-color: #f15152;
-    border: 3px outset rgba(241, 81, 82, 0.5);
+    border: 3px outset rgba(193, 63, 63, 0.5);
+}
+
+/* Subject Input */
+.subject-input {
+    background-color: #6e6e6e;
+    border: 1px solid #484848;
+    border-radius: 6px;
+    color: hsl(0, 0%, 21%)!important;
+}
+
+.subject-input:hover {
+    background-color: hsl(0, 0%, 48%);
+    border: 1px solid hsl(0, 0%, 33%);
+}
+
+.subject-input:focus {
+    background-color: hsl(0, 0%, 58%);
+    box-shadow: 2px 2px 2px hsl(0, 0%, 28%), -2px -2px 2px hsl(0, 0%, 28%), 2px -2px 2px hsl(0, 0%, 28%), -2px 2px 2px hsl(0, 0%, 28%);
+    border: 1px solid hsl(0, 0%, 43%);
+}
+
+.subject-input::placeholder {
+    color: hsl(0, 0%, 21%)!important;
+}
+
+.modal-gen-btn {
+    color: var(--black);
+    background-color: #dabd19;
+    border: 3px outset rgba(187, 162, 19, 1);
+    font-family: "Spectral";
+    font-weight: 700;
+}
+
+.modal-gen-btn:hover {
+    background-color: #eacb1b;
+    border: 3px outset rgba(187, 162, 19, 0.8);
+    color: var(--black);
+}
+
+.modal-gen-btn:active {
+    color: var(--black)!important;
+    background-color: #dabd19!important;
+    border: 3px outset rgba(187, 162, 19, 1)!important;
+}
+
+/* Cards */
+
+.ourCard {
+    background-color: var(--red);
+    padding: 2%;
+    margin: auto;
+}
+
+.ourBtn {
+    background-color: var(--black);
 }
