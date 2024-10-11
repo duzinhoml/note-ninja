@@ -14,41 +14,11 @@
   </head>
 
   <body>
-    <div class="modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Welcome to Note Ninja</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p>
-              Choose "Let's Go" to get to work making this study site your own.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              No Thanks
-            </button>
-            <button type="button" class="btn btn-primary">Let's Go</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-secondary">
+      <nav class="navbar navbar-expand-lg bg-body-secondary ourNav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Note Ninja</a>
+          <a class="navbar-brand navText logoText" href="#">Note Ninja</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -63,53 +33,56 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Flashcards</a>
+                <a class="nav-link navText" href="#">Flashcards</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Notes</a>
+                <a class="nav-link navText" href="#">Notes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Timer</a>
+                <a class="nav-link navText" href="#">Timer</a>
               </li>
             </ul>
-            <span class="navbar-text"> Subject Pool </span>
+            <span class="navbar-text navText"> Subject Pool </span>
           </div>
         </div>
       </nav>
     </header>
-
+    <div class="container-fluid quoteBackground">
+      <p class="fade-in" id="randomQuote"></p>
+    </div>
+    <img src="https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png" class="img-fluid" alt="Illustration of a dojo">
     <main>
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
+      <div class="card ourCard" style="width: 18rem">
+        <img src="https://149487459.v2.pressablecdn.com/wp-content/uploads/2017/09/flashcards-1591812_1280.jpg" class="card-img-top" alt="Stack of index cards" />
         <div class="card-body">
           <h5 class="card-title">Flashcards</h5>
           <p class="card-text">
             Boost your memory to ace your exams with unlimited flashcards for
             studying!
           </p>
-          <a href="#" class="btn btn-primary">Create</a>
+          <a href="#" class="btn btn-primary ourBtn">Create</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
+      <div class="card ourCard" style="width: 18rem">
+        <img src="https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0" class="card-img-top" alt="Notebook, pen and glasses" style="height: 157px;"/>
         <div class="card-body">
           <h5 class="card-title">Notes</h5>
           <p class="card-text">
             From chaos to clarity. Your notes all in one place. It's just that
             simple.
           </p>
-          <a href="#" class="btn btn-primary">Add</a>
+          <a href="#" class="btn btn-primary ourBtn">Add</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
+      <div class="card ourCard" style="width: 18rem">
+        <img src="https://m.media-amazon.com/images/I/61Ig-ROPJFL.__AC_SX300_SY300_QL70_FMwebp_.jpg" class="card-img-top" alt="Pomodoro style timer cube" style="width: 121px; margin-left: 50px;"/>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Timer</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary ourBtn">Go somewhere</a>
         </div>
       </div>
     </main>
@@ -119,5 +92,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/main.js"></script>
   </body>
 </html>
