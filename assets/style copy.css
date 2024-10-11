@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    transform: translateX(150px);
+}
+
+ul {
+    transform: translateX(500px);
+}
+
+.navbar-text {
+    transform: translateX(-150px);
+}
