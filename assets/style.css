@@ -8,7 +8,12 @@ html {
     font-family: "Spectral";
 }
 
-header {
+.testing {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +94,7 @@ h1 {
     display: inline-block;
     transition: 1s;
     font-size: 30px;
-}
+} Nav Bar test */
   
 
 /*.nav-bar #ninja-logo {
@@ -274,12 +279,16 @@ main {
 /* .row {margin: 0 5px;} */
 
 .card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
     box-shadow: 0 20px 5px 0;
     padding: 40px;
     background-color: #f15152;
     display: inline-block;
     top: 500px;
 }
+
 
 /* .button {
     border: none;
