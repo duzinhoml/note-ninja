@@ -136,18 +136,18 @@ header {
     font-family: "Spectral";
 }
 
-#modal-close {
+.modal-close {
     background-color: #6E757C;
     border: 3px outset rgba(110, 117, 124, 0.5);
     font-family: "Spectral";
 }
 
-#modal-close:hover {
+.modal-close:hover {
     background-color: #61676d;
     border: 3px outset rgba(97, 103, 109, 0.5);
 }
 
-#modal-close:focus {
+.modal-close:focus {
     background-color: #6E757C;
     border: 3px outset rgba(110, 117, 124, 0.5);
 }

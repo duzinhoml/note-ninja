@@ -16,7 +16,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/style-ver2.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
 
   <!-- Body -->
@@ -106,9 +106,8 @@
             <div class="modal-footer border-foot">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-secondary modal-close"
                 data-bs-dismiss="modal"
-                id="modal-close"
               >
                 Close
               </button>
@@ -144,33 +143,30 @@
                 aria-label="Close"
               ></button>
             </div>
-            <form role="button">
-              <div class="modal-body">
-                <input
-                  class="form-control subject-input"
-                  type="text"
-                  placeholder="Subject"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="modal-footer border-foot">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                  id="modal-close"
-                >
-                  Close
-                </button>
-                <button
-                  class="btn btn-primary modal-next"
-                  data-bs-target="#exampleModalToggle3"
-                  data-bs-toggle="modal"
-                >
-                  Next Subject
-                </button>
-              </div>
-            </form>
+            <div class="modal-body">
+              <input
+                class="form-control subject-input"
+                type="text"
+                placeholder="Subject"
+                aria-label="default input example"
+              />
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next"
+                data-bs-target="#exampleModalToggle3"
+                data-bs-toggle="modal"
+              >
+                Next Subject
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -185,7 +181,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content modal-bg">
             <div class="modal-header border-head">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">
                 Subject Dojo
               </h1>
               <button
@@ -195,32 +191,30 @@
                 aria-label="Close"
               ></button>
             </div>
-            <form role="button">
-              <div class="modal-body">
-                <input
-                  class="form-control subject-input"
-                  type="text"
-                  placeholder="Subject"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="modal-footer border-foot">
-                <button
-                  class="btn btn-primary modal-gen-btn"
-                  data-bs-target="#exampleModalToggle"
-                  data-bs-toggle="modal"
-                >
-                  Generate Subjects
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary modal-next"
-                  data-bs-dismiss="modal"
-                >
-                  Next Subject
-                </button>
-              </div>
-            </form>
+            <div class="modal-body">
+              <input
+                class="form-control subject-input"
+                type="text"
+                placeholder="Subject"
+                aria-label="default input example"
+              />
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                class="btn btn-primary modal-gen-btn"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+              >
+                Generate Subjects
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary modal-next"
+                data-bs-dismiss="modal"
+              >
+                Next Subject
+              </button>
+            </div>
           </div>
         </div>
       </div>
