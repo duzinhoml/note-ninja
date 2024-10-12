@@ -145,30 +145,51 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              <input
-                class="form-control subject-input userSubject"
-                type="text"
-                placeholder="Subject"
-                aria-label="default input example"
-              />
-            </div>
-            <div class="modal-footer border-foot">
-              <button
-                type="button"
-                class="btn btn-secondary modal-close"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                class="btn btn-primary modal-next addSubject"
-                data-bs-target="#exampleModalToggle3"
-                data-bs-toggle="modal"
-              >
-                Next Subject
-              </button>
-            </div>
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="modal-body">
+                <!-- <input
+                  class="form-control subject-input userSubject"
+                  type="text"
+                  placeholder="Subject"
+                  aria-label="default input example"
+                /> -->
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label"
+                    >City</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustom03"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-foot">
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">
+                    Submit form
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary modal-close"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  class="btn btn-primary modal-next addSubject"
+                  data-bs-target="#exampleModalToggle3"
+                  data-bs-toggle="modal"
+                >
+                  Next Subject
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
