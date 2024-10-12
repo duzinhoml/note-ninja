@@ -69,13 +69,7 @@
 
     <!-- Main -->
     <main>
-      <img
-        src="https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png"
-        id="dojo"
-        alt="Illustration of a dojo"
-      />
-      <div id="welcome-page">
-        <p id="welcome-txt">ENTER THE DOJO</p>
+      <div class="dojo-bg">
       </div>
       <!-- Modal Pop-Up -->
       <div
@@ -147,12 +141,6 @@
             </div>
             <form class="row g-3 needs-validation" novalidate>
               <div class="modal-body">
-                <!-- <input
-                  class="form-control subject-input userSubject"
-                  type="text"
-                  placeholder="Subject"
-                  aria-label="default input example"
-                /> -->
                 <div class="col-md-6">
                   <input
                     class="form-control subject-input userSubject"
@@ -161,35 +149,35 @@
                     aria-label="default input example"
                     required
                   />
-                  <!-- <input
-                    type="text"
-                    class="form-control"
-                    id="validationCustom03"
-                    required
-                  /> -->
                   <div class="invalid-feedback">Please provide a subject.</div>
                 </div>
               </div>
               <div class="modal-footer border-foot">
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">
-                    Submit form
-                  </button>
+                <div class="col-3">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
+                <div class="col-3">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+                <div class="col-3">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+                <!--
                 <button
                   type="button"
                   class="btn btn-secondary modal-close"
-                  data-bs-dismiss="modal"
+                  data-bs-target="#exampleModalToggle"
+                  data-bs-toggle="modal"
                 >
-                  Close
+                  Back
                 </button>
                 <button
                   class="btn btn-primary modal-next addSubject"
-                  data-bs-target="#exampleModalToggle3"
-                  data-bs-toggle="modal"
+                  type="submit"
                 >
                   Next Subject
                 </button>
+              -->
               </div>
             </form>
           </div>
@@ -293,21 +281,21 @@
       </div>
 
       <!-- Cards -->
-      <section></section>
+      <section class="card-container">
         <div class="card ourCard" style="width: 18rem">
           <img
           src="https://149487459.v2.pressablecdn.com/wp-content/uploads/2017/09/flashcards-1591812_1280.jpg"
           class="card-img-top"
           alt="Stack of index cards"
           />
-        <div class="card-body">
-          <h5 class="card-title">Flashcards</h5>
-          <p class="card-text">
+          <div class="card-body">
+            <h5 class="card-title">Flashcards</h5>
+            <p class="card-text">
             Boost your memory to ace your exams with unlimited flashcards for
             studying!
-          </p>
-          <a href="#" class="btn btn-primary ourBtn">Create</a>
-        </div>
+            </p>
+            <a href="#" class="btn btn-primary ourBtn">Create</a>
+          </div>
         </div>
         <div class="card ourCard" style="width: 18rem">
           <img
@@ -316,14 +304,14 @@
           alt="Notebook, pen and glasses"
           style="height: 157px"
          />
-        <div class="card-body">
-          <h5 class="card-title">Notes</h5>
-          <p class="card-text">
+          <div class="card-body">
+            <h5 class="card-title">Notes</h5>
+            <p class="card-text">
             From chaos to clarity. Your notes all in one place. It's just that
             simple.
-          </p>
-          <a href="#" class="btn btn-primary ourBtn">Add</a>
-        </div>
+            </p>
+            <a href="#" class="btn btn-primary ourBtn">Add</a>
+          </div>
         </div>
         <div class="card ourCard" style="width: 18rem">
           <img
@@ -332,15 +320,16 @@
           alt="Pomodoro style timer cube"
           style="width: 121px; margin-left: 50px"
           />
-        <div class="card-body">
-          <h5 class="card-title">Timer</h5>
-          <p class="card-text">
+          <div class="card-body">
+            <h5 class="card-title">Timer</h5>
+            <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary ourBtn">Go somewhere</a>
+            </p>
+            <a href="#" class="btn btn-primary ourBtn">Go somewhere</a>
+          </div>
         </div>
-      </div>
+      </section>  
     </main>
 
     <!-- Script -->
