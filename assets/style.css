@@ -27,20 +27,31 @@ header {
 .navText {
     color: var(--grey);
     font-size: 20px;
-    font-family: "Spectral";
+    font-family: "Merienda";
     cursor: pointer;
+    text-shadow: 3px 3px 3px rgba(110, 117, 124, 0.5);
 }
 
 .logoText {
     font-size: 40px;
-    font-family: "Spectral";
+    font-family: "Merienda";
+    font-weight: 700;
     cursor: default;
+    text-shadow: 4px 4px 4px rgba(110, 117, 124, 0.5);
     animation-name: brandName;
     animation-duration: 2s;
 }
 
-.logoText:hover, .logoText:focus {
+.logoText:hover {
     color: var(--red);
+}
+
+.logoText:focus {
+    color: var(--grey);
+}
+
+.logoText:active {
+    color: hsl(360, 85%, 68%);
 }
 
 @keyframes brandName {
@@ -49,8 +60,16 @@ header {
     75% {color: var(--grey);}
 }
 
-.liText:hover, .liText:focus {
+.liText:hover {
     color: rgba(216, 213, 219, 0.8);
+}
+
+.liText:focus {
+    color: var(--grey);
+}
+
+.liText:active {
+    color: hsla(270, 8%, 90%, 0.8)
 }
 
 /* Motivational Quote */
@@ -80,15 +99,36 @@ header {
 }
 
 .quoteBackground {
-    background-color: var(--grey);
+    background-color: hsl(0, 0%, 48%);
 }
 
 #dojo {
     width: 100%;
-    height: 658px;
+    height: 750px;
     background-size: 100%;
     background-position: 50%;
     padding-bottom: 50px;
+}
+
+#welcome-page {
+    display: flex;
+}
+
+#welcome-txt {
+    margin: 0px auto;
+    font-family: "Protest Revolution";
+    font-size: 170px;
+    color: #dabd19;
+    text-shadow: 12px 12px 12px var(--black);
+    transform: translateY(-500px);
+    animation-name: dropping, pop;
+    animation-duration: 2s, 3s;
+    animation-delay: 0s, 3s;
+}
+
+@keyframes dropping {
+    from {translate: 0 -400px;}
+    to {translate: 0 0;}
 }
 
 /* Modal */
@@ -99,7 +139,8 @@ header {
     background-color: #dabd19;
     border: 3px outset rgba(187, 162, 19, 1);
     border-radius: 60px;
-    font-family: "Spectral";
+    box-shadow: 2px 2px 2px hsl(0, 0%, 28%), -2px -2px 2px hsl(0, 0%, 28%), 2px -2px 2px hsl(0, 0%, 28%), -2px 2px 2px hsl(0, 0%, 28%);
+    font-family: "Merienda";
     font-weight: 700;
 }
 
