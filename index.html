@@ -282,7 +282,7 @@
 
       <!-- Cards -->
       <section class="card-container">
-        <div class="card ourCard" style="width: 18rem">
+        <!-- <div class="card ourCard" style="width: 18rem">
           <img
           src="https://149487459.v2.pressablecdn.com/wp-content/uploads/2017/09/flashcards-1591812_1280.jpg"
           class="card-img-top"
@@ -296,29 +296,31 @@
             </p>
             <a href="#" class="btn btn-primary ourBtn">Create</a>
           </div>
-        </div>
-        <div class="card ourCard" style="width: 18rem">
+        </div> -->
+        <div class="card ourCard" style="width: 39rem">
           <img
           src="https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0"
           class="card-img-top"
           alt="Notebook, pen and glasses"
           style="height: 157px"
          />
-          <div class="card-body">
-            <h5 class="card-title">Notes</h5>
-            <p class="card-text">
-            From chaos to clarity. Your notes all in one place. It's just that
-            simple.
-            </p>
-            <a href="#" class="btn btn-primary ourBtn">Add</a>
-          </div>
+          <form action="/submit">
+            <h2>Notes</h2>
+            <label for="subject">Subject</label>
+              <input id="subject" type="text">
+            <label for="content">Content</label>
+              <textarea id="content" rows="3"></textarea>
+              <input type="submit" value="Submit">
+            <p id="error"></p>
+          </form>
+          <a href="#" class="btn btn-primary ourBtn">Go to your Notes</a>
         </div>
-        <div class="card ourCard" style="width: 18rem">
+        <div class="card ourCard" style="width: 39rem">
           <img
           src="https://m.media-amazon.com/images/I/61Ig-ROPJFL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
           class="card-img-top"
           alt="Pomodoro style timer cube"
-          style="width: 121px; margin-left: 50px"
+          style="width: 300px; margin-left: 140px"
           />
           <div class="card-body">
             <h5 class="card-title">Timer</h5>

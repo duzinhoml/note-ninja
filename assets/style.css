@@ -269,6 +269,51 @@ header {
     padding: 2%;
 }
 
+form {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+  }
+
+form > *:not(label) {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+
+input[type=submit] {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--dark);
+    color: var(--light);
+  }
+
+input[type=submit]:active {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+    background-color: var(--dark-accent);
+  }
+  
+input[type=submit]:hover {
+    border-style: inset;
+    background-color: var(--dark-accent-action);
+  }
+  
+input,
+textarea {
+    border-radius: 4px;
+    border-width: 1px;
+    font-size: 1rem;
+    background-color: var(--light-accent);
+  }
+
+#error {
+    color: var(--error);
+    opacity: .75;
+    position: absolute;
+    bottom: -2rem;
+  }
+
 .ourBtn {
     background-color: var(--black);
 }
