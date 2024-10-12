@@ -53,6 +53,39 @@ function generateSubject() {
 }
 
 document.getElementById("what-subject").innerHTML = `<p class='generate-subject'>${randomSubject}</p>`;
+
+listSubjects(); */
+
+let subjects = [];
+
+function addSubject() {
+    const inputField = document.getElementsByClassName('userSubject');
+    const lastInputField = inputField[inputField.length - 1];
+    const userSubject = lastInputField.value.trim();
+
+    if (userSubject) {
+        subjects.push(userSubject);
+        lastInputField.value = '';
+        console.log(`Subject added: ${userSubject}.`);
+    } else {
+        console.log('Please enter a subject.');
+    }
 }
 
-listSubjects();/*
+function generateRandomSubject() {
+    if (subjects.length > 0) {
+        const randomIndex = Math.floor(Math.random() * subjects.length);
+        const randomSubject = subjects[randomIndex];
+        alert(`Randomly selected subject: ${randomSubject}.`);
+    } else {
+        alert('No subjects available to select from.');
+    }
+}
+
+const addSubjectButtons = document.getElementsByClassName('addSubject');
+for (let button of addSubjectButtons) {
+    button.addEventListener('click', addSubject);
+}
+
+const submitButton = document.getElementsByClassName('submitButton')[0];
+submitButton.addEventListener('click', generateRandomSubject);

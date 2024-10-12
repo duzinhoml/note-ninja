@@ -147,7 +147,7 @@
             </div>
             <div class="modal-body">
               <input
-                class="form-control subject-input"
+                class="form-control subject-input userSubject"
                 type="text"
                 placeholder="Subject"
                 aria-label="default input example"
@@ -162,7 +162,7 @@
                 Close
               </button>
               <button
-                class="btn btn-primary modal-next"
+                class="btn btn-primary modal-next addSubject"
                 data-bs-target="#exampleModalToggle3"
                 data-bs-toggle="modal"
               >
@@ -195,7 +195,7 @@
             </div>
             <div class="modal-body">
               <input
-                class="form-control subject-input"
+                class="form-control subject-input userSubject"
                 type="text"
                 placeholder="Subject"
                 aria-label="default input example"
@@ -203,7 +203,55 @@
             </div>
             <div class="modal-footer border-foot">
               <button
-                class="btn btn-primary modal-gen-btn"
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next addSubject"
+                data-bs-target="#exampleModalToggle4"
+                data-bs-toggle="modal"
+              >
+                Next Subject
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Submit Subjects -->
+      <div
+        class="modal fade"
+        id="exampleModalToggle4"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel4"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">
+                Subject Dojo
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <input
+                class="form-control subject-input userSubject"
+                type="text"
+                placeholder="Subject"
+                aria-label="default input example"
+              />
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                class="btn btn-primary modal-gen-btn submitButton"
                 data-bs-target="#exampleModalToggle"
                 data-bs-toggle="modal"
               >
@@ -211,7 +259,7 @@
               </button>
               <button
                 type="button"
-                class="btn btn-secondary modal-next"
+                class="btn btn-secondary modal-next addSubject"
                 data-bs-dismiss="modal"
               >
                 Next Subject

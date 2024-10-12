@@ -121,15 +121,15 @@ header {
     color: #dabd19;
     text-shadow: 12px 12px 12px var(--black);
     transform: translateY(-500px);
-    animation-name: dropping, pop;
-    animation-duration: 2s, 3s;
-    animation-delay: 0s, 3s;
+    /*animation-name: dropping;
+    animation-duration: 2s;
+    animation-delay: 0;*/
 }
 
-@keyframes dropping {
+/*@keyframes dropping {
     from {translate: 0 -400px;}
     to {translate: 0 0;}
-}
+}/*
 
 /* Modal */
 
