@@ -56,16 +56,16 @@ document.getElementById("what-subject").innerHTML = `<p class='generate-subject'
 
 listSubjects(); */
 
-let subjects = [];
+/*let subjects = [];
 
 function addSubject() {
     const inputField = document.getElementsByClassName('userSubject');
     const lastInputField = inputField[inputField.length - 1];
-    const userSubject = lastInputField.value.trim();
+    const userSubject = inputField.value.trim();
 
     if (userSubject) {
         subjects.push(userSubject);
-        lastInputField.value = '';
+        inputField.value = '';
         console.log(`Subject added: ${userSubject}.`);
     } else {
         console.log('Please enter a subject.');
@@ -73,12 +73,57 @@ function addSubject() {
 }
 
 function generateRandomSubject() {
-    if (subjects.length > 0) {
+    if (subjects.length > 1) {
         const randomIndex = Math.floor(Math.random() * subjects.length);
         const randomSubject = subjects[randomIndex];
         alert(`Randomly selected subject: ${randomSubject}.`);
     } else {
         alert('No subjects available to select from.');
+    }
+}
+
+const addSubjectButtons = document.getElementsByClassName('addSubject');
+for (let button of addSubjectButtons) {
+    button.addEventListener('click', addSubject);
+}
+
+const submitButton = document.getElementsByClassName('submitButton')[0];
+submitButton.addEventListener('click', generateRandomSubject);*/
+
+let subjects = [];
+
+function addSubject() {
+    const inputFields = document.getElementsByClassName('userSubject');
+    let allSubjectsAdded = false;
+
+    for (let inputField of inputFields) {
+        const userSubject = inputField.value.trim();
+
+        if (userSubject) {
+            subjects.push(userSubject);
+            allSubjectsAdded = true;
+            console.log(`Subject added: ${userSubject}.`)
+        } else {
+            console.log('Please enter a subject.');
+        }
+    }
+
+    for (let inputField of inputFields) {
+        inputField.value = '';
+    }
+
+    if (!allSubjectsAdded) {
+        console.log('No subjects were added.');
+    }
+}
+
+function generateRandomSubject() {
+    if (subjects.length > 1) {
+        const randomIndex = Math.floor(Math.random() * subjects.length);
+        const randomSubject = subjects[randomIndex];
+        alert(`Randomly selected subject: ${randomSubject}.`);
+    } else {
+        alert('Need more than one subject to select from.');
     }
 }
 
