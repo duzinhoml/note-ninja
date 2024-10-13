@@ -118,7 +118,10 @@ document.getElementById('viewDataBtn').onclick = function() {
     savedSubjectsDiv.innerHTML = subjects.length > 0 ? subjects.join('<br>') : 'No saved subjects found.';
 
     // Show the modal
-    document.getElementById('viewDataModal').style.display = 'block';
+    const modal = new bootstrap.Modal(document.getElementById('viewDataModal'));
+    modal.show();
+
+    /*document.getElementById('viewDataModal').style.display = 'block';*/
 }
 
 window.onclick = function(event) {
@@ -131,5 +134,12 @@ window.onclick = function(event) {
 // Clear Saved Data
 document.getElementById('clearDataButton').addEventListener('click', function() {
     localStorage.removeItem('subjects');
-    alert('Saved subject data has been cleared from local storage.');
+    /*alert('Saved subject data has been cleared from local storage.');*/
+    document.getElementById('clearDataModal').style.display = 'block';
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            location.reload(); // Refresh the page
+        }
+    };
 });
+
