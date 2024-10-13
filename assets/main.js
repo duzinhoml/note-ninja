@@ -131,3 +131,27 @@ refreshButton.addEventListener('click', function() {
     location.reload();
 });
 
+// Notes Form
+const form = document.getElementById ('notesForm');
+function handleFormSubmission(event) {
+    event.preventDefault();
+    const subject = document.getElementById('subject').value.trim();
+    const content = document.getElementById('content').value.trim();
+    const errorElement = document.getElementById('error');
+    if (!subject || !content) {
+        errorElement.textContent = "Please complete the form.";
+        return;
+    }
+    const userNote = {
+        subject: subject,
+        content: content
+    };
+    let userNotes = JSON.parse(localStorage.getItem('userNotes')) || [];
+        userNotes.push(userNote);
+        localStorage.setItem('userNotes',JSON.stringify(userNotes));
+    redirectPage();
+}
+function redirectPage() {
+    window.location.href = 'content.html';
+}
+form.addEventListener('submit', handleFormSubmission);

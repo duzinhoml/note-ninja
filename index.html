@@ -44,10 +44,10 @@
                 <a class="nav-link navText liText" href="#">Flashcards</a>
               </li> -->
               <li class="nav-item">
-                <a class="nav-link navText liText" href="#">Notes</a>
+                <a class="nav-link navText liText" href="#Notes">Notes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navText liText" href="#">Timer</a>
+                <a class="nav-link navText liText" href="content.html">Timer</a>
               </li>
             </ul>
             <!-- Modal Button in Nav -->
@@ -427,8 +427,8 @@
             alt="Notebook, pen and glasses"
             style="height: 157px"
           />
-          <form action="/submit">
-            <h2>Notes</h2>
+          <form id="notesForm" action="/submit">
+            <h2 id="Notes">Notes</h2>
             <label for="subject">Subject</label>
             <input id="subject" type="text" />
             <label for="content">Content</label>
@@ -437,7 +437,7 @@
             <p id="error"></p>
           </form>
           <a href="content.html" class="btn btn-primary ourBtn"
-            >Go to your Notes</a
+            >Go to your saved Notes</a
           >
         </div>
         <div class="card ourCard" style="width: 39rem">
