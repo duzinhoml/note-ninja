@@ -219,6 +219,26 @@ header {
     border: 3px outset rgba(193, 63, 63, 0.5);
 }
 
+.modal-btn-pop {
+    color: var(--black);
+    background-color: #dabd19;
+    border: 3px outset rgba(187, 162, 19, 1);
+    font-family: "Merienda";
+    font-weight: 700;
+}
+
+.modal-btn-pop:hover {
+    background-color: #eacb1b;
+    border: 3px outset rgba(187, 162, 19, 0.8);
+    color: var(--black);
+}
+
+.modal-btn-pop:active {
+    color: var(--black)!important;
+    background-color: #dabd19!important;
+    border: 3px outset rgba(187, 162, 19, 1)!important;
+}
+
 /* Subject Input */
 .subject-input {
     background-color: #6e6e6e;

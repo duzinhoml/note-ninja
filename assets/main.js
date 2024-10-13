@@ -10,7 +10,7 @@ const motivationQu = [
     `"Genius is 10% inspiration, 90% perspiration." —Thomas Edison`,
     `"Motivation is what gets you started. Habit is what keeps you going." –Jim Ryun`,
     `"Success is the sum of small efforts, repeated." —R. Collier`
-]
+];
 
 function selectRandomQuote() {
     const randomIndex = Math.floor(Math.random() * motivationQu.length);
@@ -58,23 +58,17 @@ listSubjects(); */
 
 let subjects = JSON.parse(localStorage.getItem('subjects')) || [];
 
-// Open the first modal to add a subject
-document.getElementById('openModalBtn').addEventListener('click', function() {
-    $('#subjectModal').modal('show');
-});
-
-// Add subject from modal input
+// Adding subject from input field
 document.getElementById('addSubjectBtn').addEventListener('click', function() {
     const subjectInput = document.getElementById('modalSubjectInput').value;
     if (subjectInput) {
         subjects.push(subjectInput);
         document.getElementById('modalSubjectInput').value = ''; // Clear input
-        $('#subjectModal').modal('hide');
+        $('#optionsModal').modal('hide');
         showConfirmationModal();
     }
 });
 
-// Show confirmation modal if at least 2 subjects are entered
 function showConfirmationModal() {
     if (subjects.length >= 1) {
         document.getElementById('subjectList').innerText = subjects.join(', ');
@@ -87,11 +81,11 @@ function showConfirmationModal() {
 // Confirm and save subjects to local storage
 document.getElementById('confirmBtn').addEventListener('click', function() {
     localStorage.setItem('subjects', JSON.stringify(subjects));
-    alert('Subjects saved: ' + subjects.join(', '));
     $('#confirmModal').modal('hide');
+    $('#confirmDataSaveModal').modal('show');
 });
 
-// Function to get a random subject from saved subjects
+// Getting a random subject from saved data
 function getRandomSubject() {
     if (subjects.length > 1) {
         const randomIndex = Math.floor(Math.random() * subjects.length);
@@ -101,45 +95,39 @@ function getRandomSubject() {
     }
 }
 
-// Example usage of getting a random subject
+// Displaying random subject
 document.getElementById('getRandomSubjectBtn').addEventListener('click', function() {
     const randomSubject = getRandomSubject();
-    alert('Random Subject: ' + randomSubject);
+
+    document.getElementById('subject-generator').innerHTML = `<p class='random-subject'>${randomSubject}</p>`;
+    $('#optionsModal').modal('hide');
+    $('#randomSubjectModal').modal('show');
 });
 
 // View Saved Data
 document.getElementById('viewDataBtn').onclick = function() {
-    // Retrieve saved data from local storage
+
     const savedData = localStorage.getItem('subjects');
     const subjects = savedData ? JSON.parse(savedData) : [];
 
-    // Display the subjects in the modal
     const savedSubjectsDiv = document.getElementById('savedSubjects');
     savedSubjectsDiv.innerHTML = subjects.length > 0 ? subjects.join('<br>') : 'No saved subjects found.';
 
-    // Show the modal
-    const modal = new bootstrap.Modal(document.getElementById('viewDataModal'));
-    modal.show();
-
-    /*document.getElementById('viewDataModal').style.display = 'block';*/
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('viewDataModal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
+    $('#optionsModal').modal('hide');
+    $('#viewSavedDataModal').modal('show');
+};
 
 // Clear Saved Data
-document.getElementById('clearDataButton').addEventListener('click', function() {
+document.getElementById('clearDataBtn').addEventListener('click', function() {
     localStorage.removeItem('subjects');
-    /*alert('Saved subject data has been cleared from local storage.');*/
-    document.getElementById('clearDataModal').style.display = 'block';
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            location.reload(); // Refresh the page
-        }
-    };
+    $('#optionsModal').modal('hide');
+    $('#clearDataModal').modal('show');
+});
+
+// Refresh page
+const refreshButton = document.getElementById("refreshBtn");
+
+refreshButton.addEventListener('click', function() {
+    location.reload();
 });
 
