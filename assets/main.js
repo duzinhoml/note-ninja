@@ -90,7 +90,7 @@ for (let button of addSubjectButtons) {
 const submitButton = document.getElementsByClassName('submitButton')[0];
 submitButton.addEventListener('click', generateRandomSubject);*/
 
-let subjects = [];
+/* let subjects = [];
 
 function addSubject() {
     const inputFields = document.getElementsByClassName('userSubject');
@@ -137,7 +137,7 @@ submitButton.addEventListener('click', generateRandomSubject);
 
 //Test
 
-(() => {
+/* (() => {
     'use strict'
   
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -154,4 +154,37 @@ submitButton.addEventListener('click', generateRandomSubject);
         form.classList.add('was-validated')
       }, false)
     })
-  })()
+  })() */
+
+    (() => {
+        'use strict';
+      
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation');
+      
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+                const subjectValue = form.querySelector('.userSubject').value;
+                console.log('Submitted Subject:', subjectValue);
+
+                document.getElementById('modalInputValues').innerText = `Subject: ${subjectValue}`;
+
+                $('#confirmationModal').modal('show');
+      
+                event.preventDefault();
+            }
+
+            form.classList.add('was-validated');
+          }, false);
+        });
+
+        document.getElementById('confirmButton').addEventListener('click', function() {
+            console.log('Confirmed:', document.getElementById('modalInputValues').innerText);
+            forms[0].submit();
+        });
+      })();

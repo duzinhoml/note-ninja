@@ -69,9 +69,113 @@
 
     <!-- Main -->
     <main>
-      <div class="dojo-bg">
+      <div class="dojo-bg"></div>
+      <!-- Test -->
+      <!-- Button to trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Open Modal
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Input Form</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="modal-body">
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label"
+                    >City</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control subject-input userSubject"
+                    id="validationCustom03"
+                    placeholder="Enter city"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Confirm Modal -->
+      <div
+        class="modal fade"
+        id="confirmationModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="confirmationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmationModalLabel">
+                Confirm Your Input
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="modalInputValues"></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary" id="confirmButton">
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Modal Pop-Up -->
+      <!--
       <div
         class="modal fade"
         id="exampleModalToggle"
@@ -118,7 +222,9 @@
           </div>
         </div>
       </div>
+    -->
       <!-- 1st Subject -->
+      <!--
       <div
         class="modal fade"
         id="exampleModalToggle2"
@@ -142,6 +248,20 @@
             <form class="row g-3 needs-validation" novalidate>
               <div class="modal-body">
                 <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label"
+                    >City</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control subject-input userSubject"
+                    id="validationCustom03"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-6">
                   <input
                     class="form-control subject-input userSubject"
                     type="text"
@@ -153,16 +273,11 @@
                 </div>
               </div>
               <div class="modal-footer border-foot">
-                <div class="col-3">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">
+                    Submit form
+                  </button>
                 </div>
-                <div class="col-3">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
-                <div class="col-3">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
-                <!--
                 <button
                   type="button"
                   class="btn btn-secondary modal-close"
@@ -175,15 +290,22 @@
                   class="btn btn-primary modal-next addSubject"
                   type="submit"
                 >
+                  Add Subject
+                </button>
+                <button
+                  class="btn btn-primary modal-next addSubject"
+                  type="submit"
+                >
                   Next Subject
                 </button>
-              -->
               </div>
             </form>
           </div>
         </div>
       </div>
+    -->
       <!-- 2nd Subject -->
+      <!--
       <div
         class="modal fade"
         id="exampleModalToggle3"
@@ -231,7 +353,9 @@
           </div>
         </div>
       </div>
+    -->
       <!-- Submit Subjects -->
+      <!--
       <div
         class="modal fade"
         id="exampleModalToggle4"
@@ -279,6 +403,7 @@
           </div>
         </div>
       </div>
+    -->
 
       <!-- Cards -->
       <section class="card-container">
@@ -299,39 +424,41 @@
         </div> -->
         <div class="card ourCard" style="width: 39rem">
           <img
-          src="https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0"
-          class="card-img-top"
-          alt="Notebook, pen and glasses"
-          style="height: 157px"
-         />
+            src="https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0"
+            class="card-img-top"
+            alt="Notebook, pen and glasses"
+            style="height: 157px"
+          />
           <form action="/submit">
             <h2>Notes</h2>
             <label for="subject">Subject</label>
-              <input id="subject" type="text">
+            <input id="subject" type="text" />
             <label for="content">Content</label>
-              <textarea id="content" rows="3"></textarea>
-              <input type="submit" value="Submit">
+            <textarea id="content" rows="3"></textarea>
+            <input type="submit" value="Submit" />
             <p id="error"></p>
           </form>
-          <a href="content.html" class="btn btn-primary ourBtn">Go to your Notes</a>
+          <a href="content.html" class="btn btn-primary ourBtn"
+            >Go to your Notes</a
+          >
         </div>
         <div class="card ourCard" style="width: 39rem">
           <img
-          src="https://m.media-amazon.com/images/I/61Ig-ROPJFL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
-          class="card-img-top"
-          alt="Pomodoro style timer cube"
-          style="width: 300px; margin-left: 140px"
+            src="https://m.media-amazon.com/images/I/61Ig-ROPJFL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            class="card-img-top"
+            alt="Pomodoro style timer cube"
+            style="width: 300px; margin-left: 140px"
           />
           <div class="card-body">
             <h5 class="card-title">Timer</h5>
             <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
             </p>
             <a href="content.html" class="btn btn-primary ourBtn">Let's Go!</a>
           </div>
         </div>
-      </section>  
+      </section>
     </main>
 
     <!-- Script -->
@@ -340,6 +467,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/main.js"></script>
   </body>
 </html>
