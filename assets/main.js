@@ -56,135 +56,80 @@ document.getElementById("what-subject").innerHTML = `<p class='generate-subject'
 
 listSubjects(); */
 
-/*let subjects = [];
+let subjects = JSON.parse(localStorage.getItem('subjects')) || [];
 
-function addSubject() {
-    const inputField = document.getElementsByClassName('userSubject');
-    const lastInputField = inputField[inputField.length - 1];
-    const userSubject = inputField.value.trim();
+// Open the first modal to add a subject
+document.getElementById('openModalBtn').addEventListener('click', function() {
+    $('#subjectModal').modal('show');
+});
 
-    if (userSubject) {
-        subjects.push(userSubject);
-        inputField.value = '';
-        console.log(`Subject added: ${userSubject}.`);
+// Add subject from modal input
+document.getElementById('addSubjectBtn').addEventListener('click', function() {
+    const subjectInput = document.getElementById('modalSubjectInput').value;
+    if (subjectInput) {
+        subjects.push(subjectInput);
+        document.getElementById('modalSubjectInput').value = ''; // Clear input
+        $('#subjectModal').modal('hide');
+        showConfirmationModal();
+    }
+});
+
+// Show confirmation modal if at least 2 subjects are entered
+function showConfirmationModal() {
+    if (subjects.length >= 1) {
+        document.getElementById('subjectList').innerText = subjects.join(', ');
+        $('#confirmModal').modal('show');
     } else {
-        console.log('Please enter a subject.');
+        alert('Please enter a subject.');
     }
 }
 
-function generateRandomSubject() {
+// Confirm and save subjects to local storage
+document.getElementById('confirmBtn').addEventListener('click', function() {
+    localStorage.setItem('subjects', JSON.stringify(subjects));
+    alert('Subjects saved: ' + subjects.join(', '));
+    $('#confirmModal').modal('hide');
+});
+
+// Function to get a random subject from saved subjects
+function getRandomSubject() {
     if (subjects.length > 1) {
         const randomIndex = Math.floor(Math.random() * subjects.length);
-        const randomSubject = subjects[randomIndex];
-        alert(`Randomly selected subject: ${randomSubject}.`);
+        return subjects[randomIndex];
     } else {
-        alert('No subjects available to select from.');
+        return 'Please enter at least 2 subjects.';
     }
 }
 
-const addSubjectButtons = document.getElementsByClassName('addSubject');
-for (let button of addSubjectButtons) {
-    button.addEventListener('click', addSubject);
+// Example usage of getting a random subject
+document.getElementById('getRandomSubjectBtn').addEventListener('click', function() {
+    const randomSubject = getRandomSubject();
+    alert('Random Subject: ' + randomSubject);
+});
+
+// View Saved Data
+document.getElementById('viewDataBtn').onclick = function() {
+    // Retrieve saved data from local storage
+    const savedData = localStorage.getItem('subjects');
+    const subjects = savedData ? JSON.parse(savedData) : [];
+
+    // Display the subjects in the modal
+    const savedSubjectsDiv = document.getElementById('savedSubjects');
+    savedSubjectsDiv.innerHTML = subjects.length > 0 ? subjects.join('<br>') : 'No saved subjects found.';
+
+    // Show the modal
+    document.getElementById('viewDataModal').style.display = 'block';
 }
 
-const submitButton = document.getElementsByClassName('submitButton')[0];
-submitButton.addEventListener('click', generateRandomSubject);*/
-
-/* let subjects = [];
-
-function addSubject() {
-    const inputFields = document.getElementsByClassName('userSubject');
-    let allSubjectsAdded = false;
-
-    for (let inputField of inputFields) {
-        const userSubject = inputField.value.trim();
-
-        if (userSubject) {
-            subjects.push(userSubject);
-            allSubjectsAdded = true;
-            console.log(`Subject added: ${userSubject}.`)
-        } else {
-            console.log('Please enter a subject.');
-        }
-    }
-
-    for (let inputField of inputFields) {
-        inputField.value = '';
-    }
-
-    if (!allSubjectsAdded) {
-        console.log('No subjects were added.');
+window.onclick = function(event) {
+    const modal = document.getElementById('viewDataModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
     }
 }
 
-function generateRandomSubject() {
-    if (subjects.length > 1) {
-        const randomIndex = Math.floor(Math.random() * subjects.length);
-        const randomSubject = subjects[randomIndex];
-        alert(`Randomly selected subject: ${randomSubject}.`);
-    } else {
-        alert('Need more than one subject to select from.');
-    }
-}
-
-const addSubjectButtons = document.getElementsByClassName('addSubject');
-for (let button of addSubjectButtons) {
-    button.addEventListener('click', addSubject);
-}
-
-const submitButton = document.getElementsByClassName('submitButton')[0];
-submitButton.addEventListener('click', generateRandomSubject);
-
-//Test
-
-/* (() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-  
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })() */
-
-    (() => {
-        'use strict';
-      
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation');
-      
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-          form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            } else {
-                const subjectValue = form.querySelector('.userSubject').value;
-                console.log('Submitted Subject:', subjectValue);
-
-                document.getElementById('modalInputValues').innerText = `Subject: ${subjectValue}`;
-
-                $('#confirmationModal').modal('show');
-      
-                event.preventDefault();
-            }
-
-            form.classList.add('was-validated');
-          }, false);
-        });
-
-        document.getElementById('confirmButton').addEventListener('click', function() {
-            console.log('Confirmed:', document.getElementById('modalInputValues').innerText);
-            forms[0].submit();
-        });
-      })();
+// Clear Saved Data
+document.getElementById('clearDataButton').addEventListener('click', function() {
+    localStorage.removeItem('subjects');
+    alert('Saved subject data has been cleared from local storage.');
+});

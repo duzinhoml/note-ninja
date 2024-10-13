@@ -70,94 +70,38 @@
     <!-- Main -->
     <main>
       <div class="dojo-bg"></div>
-      <!-- Test -->
-      <!-- Button to trigger modal -->
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Open Modal
-      </button>
 
       <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="container">
+        <h1>Subject Input</h1>
+        <input
+          type="text"
+          id="subjectInput"
+          placeholder="Enter a subject"
+          class="form-control"
+        />
+        <button id="openModalBtn" class="btn btn-primary mt-2">
+          Add Subject
+        </button>
+      </div>
+
+      <!-- First Modal -->
+      <div class="modal" id="subjectModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Input Form</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <form class="row g-3 needs-validation" novalidate>
-              <div class="modal-body">
-                <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label"
-                    >City</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control subject-input userSubject"
-                    id="validationCustom03"
-                    placeholder="Enter city"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please provide a valid city.
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button class="btn btn-primary" type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Confirm Modal -->
-      <div
-        class="modal fade"
-        id="confirmationModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="confirmationModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="confirmationModalLabel">
-                Confirm Your Input
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
+              <h5 class="modal-title">Add Subject</h5>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
               </button>
             </div>
             <div class="modal-body">
-              <p id="modalInputValues"></p>
+              <input
+                type="text"
+                id="modalSubjectInput"
+                placeholder="Enter subject"
+                class="form-control"
+              />
             </div>
             <div class="modal-footer">
               <button
@@ -165,245 +109,71 @@
                 class="btn btn-secondary"
                 data-dismiss="modal"
               >
+                Close
+              </button>
+              <button type="button" id="addSubjectBtn" class="btn btn-primary">
+                Add Subject
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirmation Modal -->
+      <div class="modal" id="confirmModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirm Subjects</h5>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="subjectList"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Cancel
               </button>
-              <button type="button" class="btn btn-primary" id="confirmButton">
+              <button type="button" id="confirmBtn" class="btn btn-success">
                 Confirm
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- Modal Pop-Up -->
-      <!--
-      <div
-        class="modal fade"
-        id="exampleModalToggle"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="exampleModalToggleLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content modal-bg">
-            <div class="modal-header border-head">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
-                Subject Dojo
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+
+      <!-- View Saved Data Modal -->
+      <div class="modal" id="viewDataModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirm Subjects</h5>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
             </div>
             <div class="modal-body">
-              Don't know which subject to challenge?<br /><br />
-              Try out our Subject Dojo to randomly select a subject which you
-              can study for.
+              <p id="savedSubjects"></p>
             </div>
-            <div class="modal-footer border-foot">
-              <button
-                type="button"
-                class="btn btn-secondary modal-close"
-                data-bs-dismiss="modal"
-              >
-                Close
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Cancel
               </button>
-              <button
-                class="btn btn-primary modal-next"
-                data-bs-target="#exampleModalToggle2"
-                data-bs-toggle="modal"
-              >
-                Next
+              <button type="button" id="confirmBtn" class="btn btn-success">
+                Confirm
               </button>
             </div>
           </div>
         </div>
       </div>
-    -->
-      <!-- 1st Subject -->
-      <!--
-      <div
-        class="modal fade"
-        id="exampleModalToggle2"
-        aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content modal-bg">
-            <div class="modal-header border-head">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
-                Subject Dojo
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <form class="row g-3 needs-validation" novalidate>
-              <div class="modal-body">
-                <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label"
-                    >City</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control subject-input userSubject"
-                    id="validationCustom03"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please provide a valid city.
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <input
-                    class="form-control subject-input userSubject"
-                    type="text"
-                    placeholder="Subject"
-                    aria-label="default input example"
-                    required
-                  />
-                  <div class="invalid-feedback">Please provide a subject.</div>
-                </div>
-              </div>
-              <div class="modal-footer border-foot">
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">
-                    Submit form
-                  </button>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-secondary modal-close"
-                  data-bs-target="#exampleModalToggle"
-                  data-bs-toggle="modal"
-                >
-                  Back
-                </button>
-                <button
-                  class="btn btn-primary modal-next addSubject"
-                  type="submit"
-                >
-                  Add Subject
-                </button>
-                <button
-                  class="btn btn-primary modal-next addSubject"
-                  type="submit"
-                >
-                  Next Subject
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    -->
-      <!-- 2nd Subject -->
-      <!--
-      <div
-        class="modal fade"
-        id="exampleModalToggle3"
-        aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel3"
-        tabindex="-1"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content modal-bg">
-            <div class="modal-header border-head">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">
-                Subject Dojo
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <input
-                class="form-control subject-input userSubject"
-                type="text"
-                placeholder="Subject"
-                aria-label="default input example"
-              />
-            </div>
-            <div class="modal-footer border-foot">
-              <button
-                type="button"
-                class="btn btn-secondary modal-close"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                class="btn btn-primary modal-next addSubject"
-                data-bs-target="#exampleModalToggle4"
-                data-bs-toggle="modal"
-              >
-                Next Subject
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    -->
-      <!-- Submit Subjects -->
-      <!--
-      <div
-        class="modal fade"
-        id="exampleModalToggle4"
-        aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel4"
-        tabindex="-1"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content modal-bg">
-            <div class="modal-header border-head">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">
-                Subject Dojo
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <input
-                class="form-control subject-input userSubject"
-                type="text"
-                placeholder="Subject"
-                aria-label="default input example"
-              />
-            </div>
-            <div class="modal-footer border-foot">
-              <button
-                class="btn btn-primary modal-gen-btn submitButton"
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-              >
-                Generate Subjects
-              </button>
-              <button
-                type="button"
-                class="btn btn-secondary modal-next addSubject"
-                data-bs-dismiss="modal"
-              >
-                Next Subject
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    -->
+
+      <button id="getRandomSubjectBtn" class="btn btn-secondary mt-2">
+        Get Random Subject
+      </button>
+      <button id="clearDataButton">Clear Saved Data</button>
+      <button id="viewDataBtn">View Saved Data</button>
 
       <!-- Cards -->
       <section class="card-container">
