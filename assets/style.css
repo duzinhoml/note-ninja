@@ -238,9 +238,9 @@ header {
     border: 3px outset rgba(97, 103, 109, 0.5);
 }
 
-.modal-close:focus {
+.modal-close:active {
     background-color: #6E757C;
-    border: 3px outset rgba(110, 117, 124, 0.5);
+    border: 3px outset hsl(210, 6%, 56%)!important;
 }
 
 .modal-next {
@@ -255,13 +255,8 @@ header {
 }
 
 .modal-next:active {
-    background-color: #f15152!important;
-    border: 3px outset rgba(193, 63, 63, 0.5)!important;
-}
-
-.modal-next:focus {
-    background-color: #f15152;
-    border: 3px outset rgba(193, 63, 63, 0.5);
+    background-color: #c54141!important;
+    border: 3px outset hsl(0, 51%, 50%)!important;
 }
 
 .modal-btn-pop {
@@ -284,6 +279,42 @@ header {
     border: 3px outset rgba(187, 162, 19, 1)!important;
 }
 
+.modal-clear {
+    background-color: #6E757C;
+    border: 3px outset rgba(110, 117, 124, 0.5);
+    font-family: "Spectral";
+}
+
+.modal-clear:hover {
+    background-color: #61676d;
+    border: 3px outset #f15152;
+    color: hsl(360, 85%, 73%)
+}
+
+.modal-clear:active {
+    color: hsl(360, 85%, 63%)!important;
+    background-color: #575c62;
+    border: 3px outset hsl(360, 85%, 53%)!important;
+}
+
+.modal-view {
+    background-color: #6E757C;
+    border: 3px outset rgba(110, 117, 124, 0.5);
+    font-family: "Spectral";
+}
+
+.modal-view:hover {
+    background-color: #61676d;
+    border: 3px outset #3BCEAC;
+    color: hsl(166, 60%, 72%);
+}
+
+.modal-view:active {
+    color: #3BCEAC!important;
+    background-color: #575c62;
+    border: 3px outset hsl(166, 60%, 42%)!important;
+}
+
 /* Subject Input */
 .subject-input {
     background-color: #6e6e6e;
@@ -304,7 +335,7 @@ header {
 }
 
 .subject-input::placeholder {
-    color: hsl(0, 0%, 21%)!important;
+    color: hsl(0, 0%, 16%)!important;
 }
 
 .modal-gen-btn {

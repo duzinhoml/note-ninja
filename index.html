@@ -113,6 +113,7 @@
               </button>
               <button
                 class="btn btn-primary modal-next"
+                id="optionsBtn"
                 data-bs-target="#optionsModal"
                 data-bs-toggle="modal"
               >
@@ -145,12 +146,12 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="enterSubject">
               <input
                 type="text"
                 id="modalSubjectInput"
                 placeholder="Enter subject"
-                class="form-control"
+                class="form-control subject-input"
               />
             </div>
             <div
@@ -159,16 +160,16 @@
               <button
                 type="button"
                 id="clearDataBtn"
-                class="btn btn-secondary modal-close flex-fill order-2"
+                class="btn btn-secondary modal-clear flex-fill order-2"
               >
-                Clear Data
+                Clear Subjects
               </button>
               <button
                 type="button"
                 id="viewDataBtn"
-                class="btn btn-secondary modal-close flex-fill order-3"
+                class="btn btn-secondary modal-view flex-fill order-3"
               >
-                View Saved Data
+                View Saved Subjects
               </button>
               <button
                 type="button"
@@ -217,7 +218,7 @@
               <button
                 type="button"
                 class="btn btn-secondary modal-close"
-                data-bs-dismiss="modal"
+                id="refreshBtn"
               >
                 Close
               </button>
@@ -246,7 +247,7 @@
           <div class="modal-content modal-bg">
             <div class="modal-header border-head">
               <h1 class="modal-title fs-5" id="confirmDataSaveModalLabel">
-                Data successfully saved!
+                Subject(s) Successfully Saved!
               </h1>
               <button
                 type="button"
@@ -289,7 +290,7 @@
           <div class="modal-content modal-bg">
             <div class="modal-header border-head">
               <h1 class="modal-title fs-5" id="randomSubjectModalLabel">
-                Random Subject
+                Your Random Subject
               </h1>
               <button
                 type="button"
@@ -334,7 +335,7 @@
           <div class="modal-content modal-bg">
             <div class="modal-header border-head">
               <h1 class="modal-title fs-5" id="viewSavedDataModalLabel">
-                Saved Data
+                Your Saved Subjects
               </h1>
               <button
                 type="button"
@@ -379,7 +380,7 @@
           <div class="modal-content modal-bg">
             <div class="modal-header border-head">
               <h1 class="modal-title fs-5" id="clearDataModalLabel">
-                Successfully cleared data!
+                Successfully Cleared Subjects
               </h1>
               <button
                 type="button"
@@ -388,21 +389,14 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">All saved subjects are now gone.</div>
             <div class="modal-footer border-foot">
               <button
                 type="button"
-                class="btn btn-secondary modal-close"
-                data-bs-dismiss="modal"
+                class="btn btn-primary modal-next"
+                id="refreshBtn2"
               >
                 Close
-              </button>
-              <button
-                class="btn btn-primary modal-next"
-                id="refreshBtn"
-                data-bs-dismiss="modal"
-              >
-                Back
               </button>
             </div>
           </div>
@@ -410,10 +404,8 @@
       </div>
 
       <!-- Cards -->
-      <!--
       <section class="card-container">
-      -->
-      <!-- <div class="card ourCard" style="width: 18rem">
+        <!-- <div class="card ourCard" style="width: 18rem">
           <img
           src="https://149487459.v2.pressablecdn.com/wp-content/uploads/2017/09/flashcards-1591812_1280.jpg"
           class="card-img-top"
@@ -428,7 +420,7 @@
             <a href="#" class="btn btn-primary ourBtn">Create</a>
           </div>
         </div> -->
-      
+
         <div class="card ourCard" style="width: 39rem">
           <img
             src="https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0"

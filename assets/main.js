@@ -1,3 +1,5 @@
+// Quote Generator
+
 const motivationQu = [
     `"The beautiful thing about learning is that no one can take it away from you." —B.B. King`,
     `"The mind is not a vessel to be filled but a fire to be ignited." —Plutarch`,
@@ -22,39 +24,7 @@ selectRandomQuote();
 
 setInterval(selectRandomQuote, 86400000);
 
-
 // Subject Generator
-/*const subjects = ["HTML", "CSS", "JavaScript", "Web API", "GitHub"];
-
-function listSubjects() {
-    for (let x = 0; x < subjects.length; x++) {
-        console.log(subjects[x]);
-    }
-}
-
-function generateSubject() {
-    const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
-
-    // WILL LIKELY BE REMOVED
-    if (randomSubject === "HTML") {
-        document.getElementById("what-subject").innerHTML = "HTML";
-    } else if (randomSubject === "CSS") {
-        document.getElementById("what-subject").innerHTML = "CSS";
-    } else if (randomSubject === "JavaScript") {
-        document.getElementById("what-subject").innerHTML = "JavaScript";
-    } else if (randomSubject === "Web API") {
-        document.getElementById("what-subject").innerHTML = "Web API";
-    } else if (randomSubject === "GitHub") {
-        document.getElementById("what-subject").innerHTML = "GitHub";
-    } else {
-        document.getElementById("what-subject").innerHTML = "Please try again!";
-    }
-    document.getElementById("what-subject").classList.add("highlight");
-}
-
-document.getElementById("what-subject").innerHTML = `<p class='generate-subject'>${randomSubject}</p>`;
-
-listSubjects(); */
 
 let subjects = JSON.parse(localStorage.getItem('subjects')) || [];
 
@@ -63,9 +33,12 @@ document.getElementById('addSubjectBtn').addEventListener('click', function() {
     const subjectInput = document.getElementById('modalSubjectInput').value;
     if (subjectInput) {
         subjects.push(subjectInput);
-        document.getElementById('modalSubjectInput').value = ''; // Clear input
+        document.getElementById('modalSubjectInput').value = '';
         $('#optionsModal').modal('hide');
         showConfirmationModal();
+    } else {
+        placeholderChange();
+        placeholderRevert();
     }
 });
 
@@ -73,9 +46,23 @@ function showConfirmationModal() {
     if (subjects.length >= 1) {
         document.getElementById('subjectList').innerText = subjects.join(', ');
         $('#confirmModal').modal('show');
-    } else {
-        alert('Please enter a subject.');
     }
+};
+
+function placeholderChange() {
+        document.getElementById('modalSubjectInput').placeholder = 'Please enter a subject';
+    }
+
+function placeholderRevert() {
+    document.getElementById('confirmBtn').addEventListener('click', function() {
+    document.getElementById('modalSubjectInput').placeholder = 'Enter subject';
+}); 
+    document.getElementById('noConfirmBtn').addEventListener('click', function() {
+    document.getElementById('modalSubjectInput').placeholder = 'Enter subject';
+});
+    document.getElementById('optionsBtn').addEventListener('click', function() {
+        document.getElementById('modalSubjectInput').placeholder = 'Enter subject';
+    });
 }
 
 // Confirm and save subjects to local storage
@@ -126,12 +113,17 @@ document.getElementById('clearDataBtn').addEventListener('click', function() {
 
 // Refresh page
 const refreshButton = document.getElementById("refreshBtn");
-
 refreshButton.addEventListener('click', function() {
     location.reload();
 });
 
+const refreshButton2 = document.getElementById('refreshBtn2');
+refreshButton2.addEventListener('click', function() {
+    location.reload();
+});
+
 // Notes Form
+
 const form = document.getElementById ('notesForm');
 function handleFormSubmission(event) {
     event.preventDefault();
