@@ -507,3 +507,36 @@ textarea {
         font-size: 2.6vw;
     }
 }
+
+@media (max-width: 375px) {
+    .dojo-bg-container .center {
+        top: 110px;
+        left: 33.5px;
+        text-shadow: 12px 12px 30px black;
+    }
+
+    .dojo-bg-container .center-info {
+        position: absolute;
+        display: inline;
+        z-index: 998;
+        top: 185px;
+        left: 20px;
+        font-family: "Merienda";
+        font-size: 2vw;
+        color: #dabd19;
+        text-shadow: 1px 1px 1px var(--black);
+        animation: 6s invis;
+        text-align: center;
+        margin: 0 50px;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px black;
+        padding: 5px;
+    }
+    
+    .center-info span {
+        color: #f15152;
+        animation: 3s invisNoteNinja 5s;
+        font-size: 2.5vw;
+    }
+}
