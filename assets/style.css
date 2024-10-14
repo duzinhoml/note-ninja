@@ -72,6 +72,16 @@ header {
     color: hsla(270, 8%, 90%, 0.8)
 }
 
+.dropdown {
+    background-color: rgba(81, 81, 81, 0.8);
+    border: 3px solid rgba(50, 50, 50, 0.804);
+}
+
+.dropdown:hover {
+    background-color: rgba(81, 81, 81, 0.6);
+    border: 3px solid rgba(33, 33, 33, 0.6)
+}
+
 /* Motivational Quote */
 
 .fade-in {
@@ -102,12 +112,37 @@ header {
     background-color: hsl(0, 0%, 48%);
 }
 
-.dojo-bg {
+/*.dojo-bg {
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png");
     width: 100%;
     height: 750px;
     background-size: 100%;
     background-position: 50%;
+}*/
+
+.dojo-bg-container>img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 750px;
+    text-align: center;
+    position: relative;
+}
+
+.dojo-bg-container .center {
+    position: absolute;
+    display: inline;
+    color: hotpink;
+    z-index: 998;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Protest Revolution";
+    font-size: 12vw;
+    color: #dabd19;
+    text-shadow: 12px 12px 12px var(--black);
+    white-space: nowrap;
+    animation: 4s invis;
 }
 
 /*#welcome-txt {
@@ -124,10 +159,20 @@ header {
     animation-delay: 0;
 }
 
-/*@keyframes dropping {
+@keyframes l-t-r {
+    from {translate: -800px 0;}
+    to {translate: 1500px 0;}
+}
+
+@keyframes dropping {
     from {translate: 0 -400px;}
     to {translate: 0 0;}
-}/*
+}*/
+
+@keyframes invis {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 /* Modal */
 
@@ -342,4 +387,20 @@ textarea {
     display: flex; /* Use flexbox */
     flex-direction: row; /* Align items in a row */
     justify-content: space-between; /* Optional: space between cards */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .dojo-bg-container .center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 5%);
+    }
+}
+
+@media (max-width: 425px) {
+    .dojo-bg-container {
+        padding-top: 90px;
+    }
 }

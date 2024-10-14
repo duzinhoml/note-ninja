@@ -28,7 +28,7 @@
         <div class="container-fluid">
           <a class="navbar-brand navText logoText" href="#">Note Ninja</a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler dropdown"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarText"
@@ -36,7 +36,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon dropdown-inside"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -70,7 +70,13 @@
 
     <!-- Main -->
     <main>
-      <div class="dojo-bg"></div>
+      <div class="dojo-bg-container">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png"
+          alt="Dojo"
+        />
+        <div class="center">ENTER THE DOJO</div>
+      </div>
       <!-- Pop-Up Modal -->
       <div
         class="modal fade"
@@ -404,8 +410,10 @@
       </div>
 
       <!-- Cards -->
+      <!--
       <section class="card-container">
-        <!-- <div class="card ourCard" style="width: 18rem">
+      -->
+      <!-- <div class="card ourCard" style="width: 18rem">
           <img
           src="https://149487459.v2.pressablecdn.com/wp-content/uploads/2017/09/flashcards-1591812_1280.jpg"
           class="card-img-top"
@@ -420,6 +428,7 @@
             <a href="#" class="btn btn-primary ourBtn">Create</a>
           </div>
         </div> -->
+      <!--
         <div class="card ourCard" style="width: 39rem">
           <img
             src="https://www.murdoch.edu.au/sf-images/newsportallibrary/feature-images/note-taking-feature.jpg?sfvrsn=ff31cf5f_0"
@@ -437,7 +446,7 @@
             <p id="error"></p>
           </form>
           <a href="content.html" class="btn btn-primary ourBtn"
-            >Go to your saved Notes</a
+            >My Saved Notes</a
           >
         </div>
         <div class="card ourCard" style="width: 39rem">
@@ -457,7 +466,7 @@
           </div>
         </div>
       </section>
-    </main>
+    --></main>
 
     <!-- Script -->
     <script
