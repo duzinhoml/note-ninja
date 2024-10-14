@@ -112,14 +112,6 @@ header {
     background-color: hsl(0, 0%, 48%);
 }
 
-/*.dojo-bg {
-    background-image: url("https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png");
-    width: 100%;
-    height: 750px;
-    background-size: 100%;
-    background-position: 50%;
-}*/
-
 .dojo-bg-container>img {
     width: 100%;
     height: auto;
@@ -127,48 +119,47 @@ header {
     max-height: 750px;
     text-align: center;
     position: relative;
+    filter: blur(3px);
+    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
 }
 
 .dojo-bg-container .center {
     position: absolute;
     display: inline;
     z-index: 998;
-    top: 250px;
+    top: 190px;
     left: 114px;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
     font-family: "Protest Revolution";
     font-size: 12vw;
     color: #dabd19;
     text-shadow: 12px 12px 12px var(--black);
     white-space: nowrap;
-    animation: 4s invis;
+    animation: 3s invis;
 }
 
-/*#welcome-txt {
+.dojo-bg-container .center-info {
+    position: absolute;
     display: inline;
-    margin: 0px auto;
-    font-family: "Protest Revolution";
-    font-size: 170px;
+    z-index: 998;
+    top: 460px;
+    left: 20px;
+    font-family: "Merienda";
+    font-size: 2.8vw;
     color: #dabd19;
-    text-shadow: 12px 12px 12px var(--black);
-    transform: translateX(500px);
-    transform: translateY(-500px);
-    /*animation-name: dropping;
-    animation-duration: 2s;
-    animation-delay: 0;
+    text-shadow: 4px 4px 4px var(--black);
+    animation: 6s invis;
+    text-align: center;
+    margin: 0 50px;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
 }
 
-@keyframes l-t-r {
-    from {translate: -800px 0;}
-    to {translate: 1500px 0;}
+.center-info span {
+    color: #f15152;
+    animation: 3s invisNoteNinja 5s;
+    font-size: 3.2vw;
 }
-
-@keyframes dropping {
-    from {translate: 0 -400px;}
-    to {translate: 0 0;}
-}*/
 
 @keyframes invis {
     from {opacity: 0;}
@@ -423,6 +414,7 @@ textarea {
 
 /* Media Queries */
 
+/* Tablets */
 @media (max-width: 768px) {
     .dojo-bg-container>img {
         width: 100%;
@@ -432,15 +424,41 @@ textarea {
         left: 61px;
         top: 185px;
     }
+
+    .dojo-bg-container .center-info {
+        position: absolute;
+        display: inline;
+        z-index: 998;
+        top: 330px;
+        left: 20px;
+        font-family: "Merienda";
+        font-size: 2.8vw;
+        color: #dabd19;
+        text-shadow: 3px 3px 3px var(--black);
+        animation: 6s invis;
+        text-align: center;
+        margin: 0 50px;
+        backdrop-filter: blur(40px);
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px black;
+        padding: 5px;
+    }
+    
+    .center-info span {
+        color: #f15152;
+        animation: 3s invisNoteNinja 5s;
+        font-size: 3.2vw;
+    }
 }
 
+/* Phone L */
 @media (max-width: 425px) {
     .logoText {
         font-size: 30px;
     }
 
     .dropdown {
-        transform: scale(0.8);
+        transform: scale(0.6);
     }
 
     .liText {
@@ -460,7 +478,32 @@ textarea {
     }
 
     .dojo-bg-container .center {
-        top: 135px;
+        top: 120px;
         left: 33.5px;
+    }
+
+    .dojo-bg-container .center-info {
+        position: absolute;
+        display: inline;
+        z-index: 998;
+        top: 205px;
+        left: 20px;
+        font-family: "Merienda";
+        font-size: 2.1vw;
+        color: #dabd19;
+        text-shadow: 1px 1px 1px var(--black);
+        animation: 6s invis;
+        text-align: center;
+        margin: 0 50px;
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px black;
+        padding: 5px;
+    }
+    
+    .center-info span {
+        color: #f15152;
+        animation: 3s invisNoteNinja 5s;
+        font-size: 2.6vw;
     }
 }
