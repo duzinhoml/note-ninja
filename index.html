@@ -40,9 +40,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link navText liText" href="#">Flashcards</a>
-              </li> -->
+              </li>
               <li class="nav-item">
                 <a class="nav-link navText liText" href="#Notes">Notes</a>
               </li>
@@ -430,6 +430,7 @@
         </div>
         <div class="col">
           <div class="card text-bg-dark notesCard">
+            <a href="content.html">
             <img
               src="https://t3.ftcdn.net/jpg/03/69/13/36/360_F_369133611_pQfNPVe7aF8kPS5YW77EjOu0zl4M9t7o.jpg"
               class="card-img-top"
@@ -442,7 +443,17 @@
                 lead-in to additional content. This content is a little bit
                 longer.
               </p>
+              <form id="notesForm" action="/submit">
+                <h2 id="Notes">Notes</h2>
+                <label for="subject">Subject</label>
+                <input id="subject" type="text" />
+                <label for="content">Content</label>
+                <textarea id="content" rows="3"></textarea>
+                <input type="submit" value="Submit" />
+                <p id="error"></p>
+              </form>
             </div>
+          </a>
           </div>
         </div>
         <div class="col">

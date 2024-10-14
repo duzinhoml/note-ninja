@@ -25,7 +25,7 @@
         <div class="container-fluid">
           <a class="navbar-brand navText logoText" href="#">Note Ninja</a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler dropdown"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarText"
@@ -33,27 +33,39 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon dropdown-inside"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
-                <a class="nav-link navText liText" href="#">Flashcards</a>
-              </li> -->
               <li class="nav-item">
-                <a class="nav-link navText liText" href="#">Notes</a>
+                <a class="nav-link navText liText" href="#">Flashcards</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navText liText" href="#">Timer</a>
+                <a class="nav-link navText liText" href="#Notes">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="content.html">Timer</a>
               </li>
             </ul>
+            <!-- Modal Button in Nav -->
+            <button
+              type="button"
+              class="btn btn-primary modal-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#mainModal"
+            >
+              Subject Dojo
+            </button>
           </div>
         </div>
       </nav>
+      <!-- Motivational Quote -->
       <div class="container-fluid quoteBackground">
         <p class="fade-in" id="randomQuote"></p>
       </div>
     </header>
+
+  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
