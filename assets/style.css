@@ -132,11 +132,12 @@ header {
 .dojo-bg-container .center {
     position: absolute;
     display: inline;
-    color: hotpink;
     z-index: 998;
-    top: 50%;
+    top: 250px;
+    left: 114px;
+    /*top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     font-family: "Protest Revolution";
     font-size: 12vw;
     color: #dabd19;
@@ -423,15 +424,43 @@ textarea {
 /* Media Queries */
 
 @media (max-width: 768px) {
+    .dojo-bg-container>img {
+        width: 100%;
+    }
+
     .dojo-bg-container .center {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 5%);
+        left: 61px;
+        top: 185px;
     }
 }
 
 @media (max-width: 425px) {
-    .dojo-bg-container {
-        padding-top: 90px;
+    .logoText {
+        font-size: 30px;
+    }
+
+    .dropdown {
+        transform: scale(0.8);
+    }
+
+    .liText {
+        font-size: 15px;
+    }
+
+    .modal-btn {
+        font-size: 12px;
+    }
+
+    #randomQuote {
+        font-size: 10px;
+    }
+
+    .dojo-bg-container>img {
+        top: 30px;
+    }
+
+    .dojo-bg-container .center {
+        top: 135px;
+        left: 33.5px;
     }
 }
