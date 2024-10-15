@@ -21,7 +21,7 @@ header {
 /* Nav Bar */
 
 .ourNav {
-    background-color: var(--black)!important;
+    background-color: var(--black) !important;
 }
 
 .navText {
@@ -55,9 +55,17 @@ header {
 }
 
 @keyframes brandName {
-    0% {color: var(--grey);}
-    25% {color: var(--red);}
-    75% {color: var(--grey);}
+    0% {
+        color: var(--grey);
+    }
+
+    25% {
+        color: var(--red);
+    }
+
+    75% {
+        color: var(--grey);
+    }
 }
 
 .liText:hover {
@@ -93,6 +101,7 @@ header {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -163,8 +172,13 @@ header {
 }
 
 @keyframes invis {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Modal */
@@ -187,9 +201,9 @@ header {
 }
 
 .modal-btn:active {
-    color: var(--black)!important;
-    background-color: #dabd19!important;
-    border: 3px outset rgba(187, 162, 19, 1)!important;
+    color: var(--black) !important;
+    background-color: #dabd19 !important;
+    border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
 /* Modal Pop-Up */
@@ -215,7 +229,8 @@ header {
     border-top: 1px solid #171717;
 }
 
-.modal-title, .modal-body {
+.modal-title,
+.modal-body {
     color: var(--grey);
     font-family: "Spectral";
 }
@@ -233,7 +248,7 @@ header {
 
 .modal-close:active {
     background-color: #6E757C;
-    border: 3px outset hsl(210, 6%, 56%)!important;
+    border: 3px outset hsl(210, 6%, 56%) !important;
 }
 
 .modal-next {
@@ -248,8 +263,8 @@ header {
 }
 
 .modal-next:active {
-    background-color: #c54141!important;
-    border: 3px outset hsl(0, 51%, 50%)!important;
+    background-color: #c54141 !important;
+    border: 3px outset hsl(0, 51%, 50%) !important;
 }
 
 .modal-btn-pop {
@@ -267,9 +282,9 @@ header {
 }
 
 .modal-btn-pop:active {
-    color: var(--black)!important;
-    background-color: #dabd19!important;
-    border: 3px outset rgba(187, 162, 19, 1)!important;
+    color: var(--black) !important;
+    background-color: #dabd19 !important;
+    border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
 .modal-clear {
@@ -285,9 +300,9 @@ header {
 }
 
 .modal-clear:active {
-    color: hsl(360, 85%, 63%)!important;
+    color: hsl(360, 85%, 63%) !important;
     background-color: #575c62;
-    border: 3px outset hsl(360, 85%, 53%)!important;
+    border: 3px outset hsl(360, 85%, 53%) !important;
 }
 
 .modal-view {
@@ -303,9 +318,9 @@ header {
 }
 
 .modal-view:active {
-    color: #3BCEAC!important;
+    color: #3BCEAC !important;
     background-color: #575c62;
-    border: 3px outset hsl(166, 60%, 42%)!important;
+    border: 3px outset hsl(166, 60%, 42%) !important;
 }
 
 /* Subject Input */
@@ -313,7 +328,7 @@ header {
     background-color: #6e6e6e;
     border: 1px solid #484848;
     border-radius: 6px;
-    color: hsl(0, 0%, 21%)!important;
+    color: hsl(0, 0%, 21%) !important;
 }
 
 .subject-input:hover {
@@ -328,7 +343,7 @@ header {
 }
 
 .subject-input::placeholder {
-    color: hsl(0, 0%, 16%)!important;
+    color: hsl(0, 0%, 16%) !important;
 }
 
 .modal-gen-btn {
@@ -346,9 +361,9 @@ header {
 }
 
 .modal-gen-btn:active {
-    color: var(--black)!important;
-    background-color: #dabd19!important;
-    border: 3px outset rgba(187, 162, 19, 1)!important;
+    color: var(--black) !important;
+    background-color: #dabd19 !important;
+    border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
 /* Body */
@@ -359,70 +374,75 @@ body {
 
 /* Cards */
 
+.study-tools {
+    color: #dabd19;
+    text-shadow: 4px 4px 4px var(--black);
+    font-family: "Merienda";
+    font-size: 3.1vw;
+    display: flex;
+    justify-content: center;
+    margin: 60px 30px 20px;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    padding: 10px;
+    background-color: #171717;
+}
+
 /* Test Cards */
 
 .toolCards {
-    margin: 10px 5px 0 -5px;
+    margin: 10px 0px 30px;
     transform: scale(0.95);
     font-family: "Spectral";
+    background-color: var(--black);
+    backdrop-filter: blur(50px);
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px black;
 }
 
 .card-img-overlay {
     font-size: 15px;
     font-weight: 600;
-    margin: 5px;
     text-shadow: 2px 2px 2px var(--black);
     backdrop-filter: blur(3px);
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
 }
 
-.flashcardsCard {
+.card {
     height: 310px;
     width: 465px;
     font-size: 15px;
     border-radius: 50px;
+    transform: scale(0.9);
+    bottom: 12px;
+    left: -3px;
+    border: 5px solid var(--red);
 }
 
-.flashcardsCard>img {
+.card:hover {
+    transform: scale(1);
+}
+
+.card>img {
     border-radius: 50px;
-    /*filter: blur(2px);*/
     box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
 }
 
-.notesCard {
-    height: 310px;
-    width: 465px;
-    font-size: 15px;
-    border-radius: 50px;
-}
-
-.notesCard>img {
-    border-radius: 50px;
-    /*filter: blur(2px);*/
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
-}
-
-#notes-test {
-    transform: translate(0px, -50px);
-    transform: scale(0.8);
-}
-
-.timerCard {
-    height: 310px;
-    width: 465px;
-    font-size: 15px;
-    border-radius: 50px;
-}
-
-.timerCard>img {
-    border-radius: 50px;
-    /*filter: blur(2px);*/
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
+.card-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 17px;
+    text-shadow: none;
+    backdrop-filter: blur(90px);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px var(--black);
+    font-weight: 700;
 }
 
 /**/
-
+/*
 .ourCard {
     background-color: var(--red);
     padding: 2%;
@@ -436,38 +456,47 @@ input[type=submit] {
     font-size: 1rem;
     background-color: var(--dark);
     color: var(--light);
-  }
+}
 
 input[type=submit]:active {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
     background-color: var(--dark-accent);
-  }
-  
+}
+
 input[type=submit]:hover {
     border-style: inset;
     background-color: var(--dark-accent-action);
-  }
-  
+}
+
 input,
 textarea {
     border-radius: 4px;
     border-width: 1px;
     font-size: 1rem;
     background-color: var(--light-accent);
-  }
+}
 
 #error {
     color: var(--error);
     opacity: .75;
     position: absolute;
     bottom: -2rem;
-  }
+}
 
 
 .card-container {
-    display: flex; /* Use flexbox */
-    flex-direction: row; /* Align items in a row */
-    justify-content: space-between; /* Optional: space between cards */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}*/
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: lightgray;
+    color: black;
 }
 
 /* Media Queries */
@@ -479,7 +508,7 @@ textarea {
     }
 
     .dojo-bg-container .center {
-        left: 61px;
+        left: 114.5px;
         top: 185px;
     }
 
@@ -488,7 +517,7 @@ textarea {
         display: inline;
         z-index: 998;
         top: 330px;
-        left: 20px;
+        left: 0px;
         font-family: "Merienda";
         font-size: 2.8vw;
         color: #dabd19;
@@ -501,11 +530,27 @@ textarea {
         box-shadow: 3px 3px 3px black;
         padding: 5px;
     }
-    
+
     .center-info span {
         color: #f15152;
         animation: 3s invisNoteNinja 5s;
         font-size: 3.2vw;
+    }
+
+    .toolCards {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .card {
+        left: 65%;
+        margin-top: 20px;
+        transform: scale(1);
+    }
+
+    .card:last-child {
+        margin-bottom: px;
     }
 }
 
@@ -558,7 +603,7 @@ textarea {
         box-shadow: 2px 2px 2px black;
         padding: 5px;
     }
-    
+
     .center-info span {
         color: #f15152;
         animation: 3s invisNoteNinja 5s;
@@ -566,6 +611,7 @@ textarea {
     }
 }
 
+/* Phone M */
 @media (max-width: 375px) {
     .dojo-bg-container .center {
         top: 110px;
@@ -591,16 +637,16 @@ textarea {
         box-shadow: 2px 2px 2px black;
         padding: 5px;
     }
-    
+
     .center-info span {
         color: #f15152;
         animation: 3s invisNoteNinja 5s;
         font-size: 2.5vw;
     }
 }
-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: lightgray;
-    color: black;
+
+@media (max-width: 320) {
+    .card {
+        position: absolute !important;
+    }
 }
