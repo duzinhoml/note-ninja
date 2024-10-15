@@ -1,6 +1,8 @@
 // Flashcards
 
 const container = document.querySelector(".flashcards-container");
+const containerBg = document.getElementById('flashcardsBg');
+const addQuestionBg = document.getElementById('questionsBg');
 const addQuestionCard = document.getElementById('add-question-card');
 const cardButton = document.getElementById('save-btn');
 const question = document.getElementById('question');
@@ -13,16 +15,20 @@ let editBool = false;
 // Add question
 addQuestion.addEventListener('click', () => {
     container.classList.add('hide');
+    containerBg.classList.add('hide');
     question.value = '';
     answer.value = '';
+    addQuestionBg.classList.remove('hide');
     addQuestionCard.classList.remove('hide');
 });
 
 // Hide Create Flashcard Card
 closeBtn.addEventListener('click', (hideQuestion = () => {
     container.classList.remove('hide');
+    containerBg.classList.remove('hide');
+    addQuestionBg.classList.add('hide');
     addQuestionCard.classList.add('hide');
-    if(editBool) {
+    if (editBool) {
         editBool = false;
         submitQuestion();
     };
@@ -34,9 +40,10 @@ cardButton.addEventListener('click', (submitQuestion = () => {
     editBool = false;
     tempQuestion = question.value.trim();
     tempAnswer = answer.value.trim();
-    if(!tempQuestion || !tempAnswer) {
+    if (!tempQuestion || !tempAnswer) {
         errorMessage.classList.remove('hide');
     } else {
+        containerBg.classList.remove('hide');
         container.classList.remove('hide');
         errorMessage.classList.add('hide');
         viewlist();
@@ -79,6 +86,7 @@ function viewlist() {
     editButton.addEventListener('click', () => {
         editBool = true;
         modifyElement(editButton, true);
+        addQuestionBg.classList.remove('hide');
         addQuestionCard.classList.remove('hide');
     });
     buttonsCon.appendChild(editButton);
@@ -92,7 +100,7 @@ function viewlist() {
         modifyElement(deleteButton);
     });
     buttonsCon.appendChild(deleteButton);
-    
+
     div.appendChild(buttonsCon);
     listCard[0].appendChild(div);
     hideQuestion();
@@ -111,7 +119,7 @@ const modifyElement = (element, edit = false) => {
     parentDiv.remove();
 };
 
-// Disable  Edit & Delete Buttons
+// Disable Edit & Delete Buttons
 const disableButtons = (value) => {
     let editButtons = document.getElementsByClassName('edit');
     Array.from(editButtons).forEach(element => {
@@ -121,14 +129,14 @@ const disableButtons = (value) => {
 
 // Notes Form
 
-const form = document.getElementById ('notesForm');
+const form = document.getElementById('notesForm');
 function handleFormSubmission(event) {
     event.preventDefault();
     const subject = document.getElementById('subject').value.trim();
     const content = document.getElementById('content').value.trim();
     const errorElement = document.getElementById('error');
     errorElement.textContent = '';
-    
+
     if (!subject || !content) {
         errorElement.textContent = "Please complete the form.";
         return;
@@ -138,9 +146,9 @@ function handleFormSubmission(event) {
         content: content
     };
     let userNotes = JSON.parse(localStorage.getItem('userNotes')) || [];
-        userNotes.push(userNote);
-        localStorage.setItem('userNotes',JSON.stringify(userNotes));
-        renderNotesList();
+    userNotes.push(userNote);
+    localStorage.setItem('userNotes', JSON.stringify(userNotes));
+    renderNotesList();
 }
 
 form.addEventListener('submit', handleFormSubmission);
@@ -167,7 +175,7 @@ function renderNotesList() {
         userNotes.forEach(post => {
             const postElement = document.createElement('article');
             postElement.innerHTML =
-                    `<h2>${post.subject}</h2>
+                `<h2>${post.subject}</h2>
                         <p>${post.content}</p>`;
             notesList.appendChild(postElement);
         });

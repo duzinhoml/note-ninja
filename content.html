@@ -397,108 +397,8 @@
           </div>
         </div>
       </div>
-      <!-- Flashcards -->
-      <div class="flashcards-container">
-        <div class="add-flashcard-con">
-          <button id="add-flashcard">Add Flashcard</button>
-          <!--
-          <button
-            type="button"
-            class="btn"
-            id="add-flashcard"
-            data-bs-toggle="modal"
-            data-bs-target="#flashcardModal"
-          >
-            Add Flashcard
-          </button>
-        --></div>
-
-        <div id="card-con">
-          <div class="card-list-con"></div>
-        </div>
-      </div>
-      <!--
-      <div
-        class="modal fade"
-        id="flashcardModal"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="flashcardModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content modal-bg">
-            <div class="modal-header border-head">
-              <h1 class="modal-title fs-5" id="flashcardModalLabel">
-                Subject Dojo
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              Don't know which subject to challenge?<br /><br />
-              Try out our Subject Dojo to randomly select a subject which you
-              can study for.
-            </div>
-            <div class="modal-footer border-foot">
-              <button
-                type="button"
-                class="btn btn-secondary modal-close"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                class="btn btn-primary modal-next"
-                id="optionsBtn"
-                data-bs-target="#optionsModal"
-                data-bs-toggle="modal"
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-       -->
-      <div class="question-con hide" id="add-question-card">
-        <h2>Add Flashcard</h2>
-        <div class="wrapper">
-          <div class="error-con">
-            <span class="hide" id="errorFC">Input fields cannot be empty!</span>
-          </div>
-          <button
-            type="button"
-            class="btn-close"
-            aria-label="Close"
-            id="close-btn"
-          ></button>
-        </div>
-
-        <label for="question">Question:</label>
-        <textarea
-          class="input"
-          id="question"
-          placeholder="Type the question here..."
-          rows="2"
-        ></textarea>
-        <label for="answer">Answer:</label>
-        <textarea
-          class="input"
-          id="answer"
-          rows="4"
-          placeholder="Type the answer here..."
-        ></textarea>
-        <button id="save-btn">Save</button>
-      </div>
 
       <!-- Notes -->
-
       <form id="notesForm" action="/submit">
         <h2 id="Notes">Notes</h2>
         <label for="subject">Subject</label>
@@ -514,6 +414,59 @@
       <section id="notesList" class="container notesList">
         <!-- Notes List here -->
       </section>
+
+      <!-- Flashcards -->
+      <div class="flashcards-outline-con" id="flashcardsBg">
+        <div class="flashcards-container">
+          <div class="add-flashcard-con">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              id="add-flashcard"
+            >
+              Add Flashcard
+            </button>
+          </div>
+
+          <div id="card-con">
+            <div class="card-list-con"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="questions-outline-con hide" id="questionsBg">
+        <div class="question-con hide" id="add-question-card">
+          <h2>Add Flashcard</h2>
+          <div class="wrapper">
+            <div class="error-con">
+              <span class="hide" id="errorFC"
+                >Input fields cannot be empty!</span
+              >
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+              id="close-btn"
+            ></button>
+          </div>
+
+          <label for="question">Question:</label>
+          <textarea
+            class="input"
+            id="question"
+            placeholder="Type the question here..."
+            rows="2"
+          ></textarea>
+          <label for="answer">Answer:</label>
+          <textarea
+            class="input"
+            id="answer"
+            rows="4"
+            placeholder="Type the answer here..."
+          ></textarea>
+          <button id="save-btn">Save</button>
+        </div>
+      </div>
     </main>
 
     <script

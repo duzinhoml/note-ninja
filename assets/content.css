@@ -16,12 +16,13 @@ header {
     position: fixed;
     width: 100%;
     z-index: 999;
+    top: 0px;
 }
 
 /* Nav Bar */
 
 .ourNav {
-    background-color: var(--black)!important;
+    background-color: var(--black) !important;
 }
 
 .navText {
@@ -55,9 +56,17 @@ header {
 }
 
 @keyframes brandName {
-    0% {color: var(--grey);}
-    25% {color: var(--red);}
-    75% {color: var(--grey);}
+    0% {
+        color: var(--grey);
+    }
+
+    25% {
+        color: var(--red);
+    }
+
+    75% {
+        color: var(--grey);
+    }
 }
 
 .liText:hover {
@@ -93,6 +102,7 @@ header {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -132,9 +142,9 @@ header {
 }
 
 .modal-btn:active {
-    color: var(--black)!important;
-    background-color: #dabd19!important;
-    border: 3px outset rgba(187, 162, 19, 1)!important;
+    color: var(--black) !important;
+    background-color: #dabd19 !important;
+    border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
 /* Modal Pop-Up */
@@ -160,7 +170,8 @@ header {
     border-top: 1px solid #171717;
 }
 
-.modal-title, .modal-body {
+.modal-title,
+.modal-body {
     color: var(--grey);
     font-family: "Spectral";
 }
@@ -178,7 +189,7 @@ header {
 
 .modal-close:active {
     background-color: #6E757C;
-    border: 3px outset hsl(210, 6%, 56%)!important;
+    border: 3px outset hsl(210, 6%, 56%) !important;
 }
 
 .modal-next {
@@ -193,8 +204,8 @@ header {
 }
 
 .modal-next:active {
-    background-color: #c54141!important;
-    border: 3px outset hsl(0, 51%, 50%)!important;
+    background-color: #c54141 !important;
+    border: 3px outset hsl(0, 51%, 50%) !important;
 }
 
 .modal-btn-pop {
@@ -212,9 +223,9 @@ header {
 }
 
 .modal-btn-pop:active {
-    color: var(--black)!important;
-    background-color: #dabd19!important;
-    border: 3px outset rgba(187, 162, 19, 1)!important;
+    color: var(--black) !important;
+    background-color: #dabd19 !important;
+    border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
 .modal-clear {
@@ -230,9 +241,9 @@ header {
 }
 
 .modal-clear:active {
-    color: hsl(360, 85%, 63%)!important;
+    color: hsl(360, 85%, 63%) !important;
     background-color: #575c62;
-    border: 3px outset hsl(360, 85%, 53%)!important;
+    border: 3px outset hsl(360, 85%, 53%) !important;
 }
 
 .modal-view {
@@ -248,9 +259,9 @@ header {
 }
 
 .modal-view:active {
-    color: #3BCEAC!important;
+    color: #3BCEAC !important;
     background-color: #575c62;
-    border: 3px outset hsl(166, 60%, 42%)!important;
+    border: 3px outset hsl(166, 60%, 42%) !important;
 }
 
 /* Subject Input */
@@ -258,7 +269,7 @@ header {
     background-color: #6e6e6e;
     border: 1px solid #484848;
     border-radius: 6px;
-    color: hsl(0, 0%, 21%)!important;
+    color: hsl(0, 0%, 21%) !important;
 }
 
 .subject-input:hover {
@@ -273,7 +284,7 @@ header {
 }
 
 .subject-input::placeholder {
-    color: hsl(0, 0%, 16%)!important;
+    color: hsl(0, 0%, 16%) !important;
 }
 
 .modal-gen-btn {
@@ -291,9 +302,9 @@ header {
 }
 
 .modal-gen-btn:active {
-    color: var(--black)!important;
-    background-color: #dabd19!important;
-    border: 3px outset rgba(187, 162, 19, 1)!important;
+    color: var(--black) !important;
+    background-color: #dabd19 !important;
+    border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
 /* Body */
@@ -302,17 +313,67 @@ body {
     background-color: #202327;
 }
 
+/* Notes */
+form,
+section {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1%;
+    margin: 2%;
+    width: 30%;
+    transform: translateY(100px);
+}
+
+form>*:not(label) {
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+input[type="submit"] {
+    background-color: #171717;
+    color: grey;
+}
+
+.notesBtn {
+    background-color: #171717;
+    color: grey;
+    border: grey;
+}
+
+#Notes,
+#subject,
+#content {
+    color: black !important;
+}
+
+#Notes {
+    text-align: center;
+}
+
 /* Flashcards */
 
 /* Add Flashcard button section */
+.flashcards-outline-con {
+    background-color: var(--black);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    transform: translate(670px, -450px);
+    width: 50vw;
+    max-width: 62.5em;
+    height: 155px;
+}
+
 .flashcards-container {
     width: 48vw;
     max-width: 62.5em;
-    position: relative;
-    top: 800px;
-    left: 40px;
+    transform: translate(16px, 15px);
     background-color: var(--grey);
     border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    border: 5px outset var(--red);
+    text-shadow: 2px 2px 2px var(--black);
+    backdrop-filter: blur(3px);
     box-shadow: 3px 3px 3px black;
 }
 
@@ -333,11 +394,12 @@ button {
     font-size: 1em;
     background-color: #f15152;
     border: 3px outset rgba(193, 63, 63, 0.5);
-    font-family: "Spectral";
+    font-family: "Merienda";
     color: var(--grey);
     padding: 0.8em 1.2em;
     font-weight: 500;
     border-radius: 0.4em;
+    transform: translateY(10px);
 }
 
 .add-flashcard-con button:hover {
@@ -346,8 +408,8 @@ button {
 }
 
 .add-flashcard-con button:active {
-    background-color: #c54141!important;
-    border: 3px outset hsl(0, 51%, 50%)!important;
+    background-color: #c54141 !important;
+    border: 3px outset hsl(0, 51%, 50%) !important;
 }
 
 #card-con {
@@ -355,6 +417,18 @@ button {
 }
 
 /* Input info section */
+.questions-outline-con {
+    background-color: var(--black);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    transform: translate(740px, -450px);
+    width: 40vw;
+    max-width: 62.5em;
+    height: 663px;
+    opacity: 1;
+}
+
 .question-con {
     width: 90vw;
     max-width: 34em;
@@ -363,11 +437,12 @@ button {
     justify-content: center;
     background-color: var(--grey);
     position: relative;
-    top: 1228px;
-    left: 40px;
+    transform: translate(17px, 15px);
     padding: 3em 2em;
     border-radius: 20px;
     box-shadow: 3px 3px 3px black;
+    border: 5px outset var(--red);
+    font-family: "Spectral";
 }
 
 .question-con h2 {
@@ -376,6 +451,7 @@ button {
     font-weight: 600;
     text-align: center;
     margin-bottom: 2em;
+    font-family: "Merienda";
 }
 
 .wrapper {
@@ -391,9 +467,10 @@ button {
     color: var(--red)
 }
 
-#error {
+#errorFC {
     color: var(--red);
     font-weight: 400;
+    font-family: "Merienda";
 }
 
 .wrapper button {
@@ -407,8 +484,9 @@ button {
     justify-self: flex-end;
 }
 
-.wrapper button:active, .wrapper button:focus {
-    border: none!important;
+.wrapper button:active,
+.wrapper button:focus {
+    border: none !important;
     box-shadow: none;
     border-radius: 50%;
 }
@@ -438,12 +516,24 @@ textarea:focus {
 }
 
 #save-btn {
-    font-size: 1em;
+    font-size: 1.2em;
     background-color: var(--red);
+    border: 3px outset rgba(193, 63, 63, 0.5);
+    font-family: "Merienda";
     color: var(--grey);
     padding: 0.6em 0;
     border-radius: 0.3em;
     font-weight: 600;
+}
+
+#save-btn:hover {
+    background-color: #d64747;
+    border: 3px outset #d8494980;
+}
+
+#save-btn:active {
+    background-color: #c54141 !important;
+    border: 3px outset hsl(0, 51%, 50%) !important;
 }
 
 .card-list-con {
@@ -458,32 +548,50 @@ textarea:focus {
     box-shadow: 0 0.4em 1.2em black;
     padding: 1.2em;
     border-radius: 0.4em;
+    transform: translate(0px, -10px);
+    transform: scale(0.95);
 }
 
-.question-div, .answer-div {
+.question-div,
+.answer-div {
     text-align: justify;
+    text-shadow: 2px 2px 2px var(--grey);
+    font-family: "Spectral";
 }
 
 .question-div {
     margin-bottom: 0.5em;
-    font-weight: 500;
-    color:#c54141;
+    font-weight: 600;
+    color: var(--black);
 }
 
 .answer-div {
     margin-top: 1em;
     font-weight: 400;
-    color: grey;
+    color: hsl(0, 0%, 29%);
 }
 
 .show-hide-btn {
     display: block;
-    background-color: var(--red);
+    background-color: #6E757C;
     color: white;
     text-decoration: none;
     text-align: center;
     padding: 0.6em 0;
     border-radius: 0.3em;
+    font-family: "Spectral";
+    text-shadow: 1px 1px 1px var(--black);
+    border: 3px outset rgba(110, 117, 124, 0.5);
+}
+
+.show-hide-btn:hover {
+    background-color: #61676d;
+    border: 3px outset rgba(97, 103, 109, 0.5);
+}
+
+.show-hide-btn:active {
+    background-color: #6E757C;
+    border: 3px outset hsl(210, 6%, 56%) !important;
 }
 
 .buttons-con {
@@ -491,18 +599,35 @@ textarea:focus {
     justify-content: flex-end;
 }
 
-.edit, .delete {
+.edit,
+.delete {
     background-color: transparent;
     padding: 0.5em;
     font-size: 1.2em;
 }
 
 .edit {
-    color: var(--red);
+    color: #3BCEAC;
+}
+
+.edit:hover {
+    color: hsl(166, 60%, 72%);
+}
+
+.edit:active {
+    color: #3BCEAC !important;
 }
 
 .delete {
-    color: green;
+    color: var(--red);
+}
+
+.delete:hover {
+    color: hsl(360, 85%, 73%);
+}
+
+.delete:active {
+    color: hsl(360, 85%, 63%) !important;
 }
 
 .hide {
@@ -520,50 +645,17 @@ textarea:focus {
     body {
         font-size: 14px;
     }
+
     .card-list-con {
         grid-template-columns: 1fr;
         gap: 1.2em;
     }
 }
 
-/* Notes */
-form, section {
-    display: flex;
-    flex-flow: column wrap;
-    padding: 1%;
-    margin: 2%;
-    width: 30%;
-
-  }
-
-form > *:not(label) {
-    margin: 1rem 0;
-    padding: 0.5rem;
-  }
-
-input[type="submit"] {
-    background-color: #171717;
-    color: grey;
-}
-.notesBtn {
-    background-color: #171717;
-    color: grey;
-    border: grey;
-}
-
-#Notes, #subject, #content {
-    color: black!important;
-}
-#Notes {
-    text-align: center;
-}
-  
 /* Media Queries */
 
 /* Tablets */
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
 
 /* Phone L */
 @media (max-width: 425px) {
@@ -588,6 +680,4 @@ input[type="submit"] {
     }
 }
 
-@media (max-width: 375px) {
-
-}
+@media (max-width: 375px) {}
