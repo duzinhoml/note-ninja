@@ -4,9 +4,8 @@
 
 Visually appealing organizer where you can create flashcards, keep all of your notes in one place, and utilize a study timer with optional subject generator.
 
-<!-- - What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
+Our motivation was to help others study by creating a site that is easily accessed, everything to help with studing on one site. Keeps notes and flashcards where you can go back and continue to study the same subject matter or different subjects.
+
 - What did you learn? -->
 
 <!-- ## Table of Contents

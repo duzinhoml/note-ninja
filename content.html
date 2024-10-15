@@ -10,20 +10,26 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merienda:wght@300..900&family=Protest+Revolution&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/881ffc6a74.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/content.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg bg-body-secondary ourNav">
         <div class="container-fluid">
-          <a class="navbar-brand navText logoText" href="#">Note Ninja</a>
+          <a class="navbar-brand navText logoText" href="./index.html"
+            >Note Ninja</a
+          >
           <button
             class="navbar-toggler dropdown"
             type="button"
@@ -65,12 +71,456 @@
       </div>
     </header>
 
-  
+    <main class="bg-dark bg-gradient">
+      <!-- Pop-Up Modal -->
+      <div
+        class="modal fade"
+        id="mainModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="mainModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="mainModalLabel">Subject Dojo</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Don't know which subject to challenge?<br /><br />
+              Try out our Subject Dojo to randomly select a subject which you
+              can study for.
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next"
+                id="optionsBtn"
+                data-bs-target="#optionsModal"
+                data-bs-toggle="modal"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Options Modal -->
+      <div
+        class="modal fade"
+        id="optionsModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="optionsModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="optionsModalLabel">
+                Subject Input
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="enterSubject">
+              <input
+                type="text"
+                id="modalSubjectInput"
+                placeholder="Enter subject"
+                class="form-control subject-input"
+              />
+            </div>
+            <div
+              class="modal-footer border-foot d-flex justify-content-md-center"
+            >
+              <button
+                type="button"
+                id="clearDataBtn"
+                class="btn btn-secondary modal-clear flex-fill order-2"
+              >
+                Clear Subjects
+              </button>
+              <button
+                type="button"
+                id="viewDataBtn"
+                class="btn btn-secondary modal-view flex-fill order-3"
+              >
+                View Saved Subjects
+              </button>
+              <button
+                type="button"
+                id="getRandomSubjectBtn"
+                class="btn btn-secondary modal-btn-pop flex-fill order-1 w-100"
+              >
+                Random Subject
+              </button>
+              <button
+                class="btn btn-primary modal-next flex-grow-1 order-4"
+                id="addSubjectBtn"
+              >
+                Add Subject
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Subjects Confirmation Modal -->
+      <div
+        class="modal fade"
+        id="confirmModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="confirmModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="confirmModalLabel">
+                Confirm Subjects
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p id="subjectList"></p>
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                id="refreshBtn"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next btn-success"
+                id="confirmBtn"
+                data-bs-toggle="modal"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Data Saved: Confirmed Modal -->
+      <div
+        class="modal fade"
+        id="confirmDataSaveModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="confirmDataSaveModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="confirmDataSaveModalLabel">
+                Subject(s) Successfully Saved!
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next"
+                data-bs-target="#optionsModal"
+                data-bs-toggle="modal"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Random Subject Modal -->
+      <div
+        class="modal fade"
+        id="randomSubjectModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="randomSubjectModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="randomSubjectModalLabel">
+                Your Random Subject
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="subject-generator">
+              <p class="random-subject"></p>
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next"
+                data-bs-target="#optionsModal"
+                data-bs-toggle="modal"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- View Saved Data Modal -->
+      <div
+        class="modal fade"
+        id="viewSavedDataModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="viewSavedDataModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="viewSavedDataModalLabel">
+                Your Saved Subjects
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="saved-data">
+              <span id="savedSubjects"></span>
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next"
+                data-bs-target="#optionsModal"
+                data-bs-toggle="modal"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Clear Saved Data Modal -->
+      <div
+        class="modal fade"
+        id="clearDataModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="clearDataModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="clearDataModalLabel">
+                Successfully Cleared Subjects
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">All saved subjects are now gone.</div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-primary modal-next"
+                id="refreshBtn2"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Flashcards -->
+      <div class="flashcards-container">
+        <div class="add-flashcard-con">
+          <button id="add-flashcard">Add Flashcard</button>
+          <!--
+          <button
+            type="button"
+            class="btn"
+            id="add-flashcard"
+            data-bs-toggle="modal"
+            data-bs-target="#flashcardModal"
+          >
+            Add Flashcard
+          </button>
+        --></div>
+
+        <div id="card-con">
+          <div class="card-list-con"></div>
+        </div>
+      </div>
+      <!--
+      <div
+        class="modal fade"
+        id="flashcardModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="flashcardModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-head">
+              <h1 class="modal-title fs-5" id="flashcardModalLabel">
+                Subject Dojo
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Don't know which subject to challenge?<br /><br />
+              Try out our Subject Dojo to randomly select a subject which you
+              can study for.
+            </div>
+            <div class="modal-footer border-foot">
+              <button
+                type="button"
+                class="btn btn-secondary modal-close"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                class="btn btn-primary modal-next"
+                id="optionsBtn"
+                data-bs-target="#optionsModal"
+                data-bs-toggle="modal"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+       -->
+      <div class="question-con hide" id="add-question-card">
+        <h2>Add Flashcard</h2>
+        <div class="wrapper">
+          <div class="error-con">
+            <span class="hide" id="errorFC">Input fields cannot be empty!</span>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            id="close-btn"
+          ></button>
+        </div>
+
+        <label for="question">Question:</label>
+        <textarea
+          class="input"
+          id="question"
+          placeholder="Type the question here..."
+          rows="2"
+        ></textarea>
+        <label for="answer">Answer:</label>
+        <textarea
+          class="input"
+          id="answer"
+          rows="4"
+          placeholder="Type the answer here..."
+        ></textarea>
+        <button id="save-btn">Save</button>
+      </div>
+
+      <!-- Notes -->
+
+      <form id="notesForm" action="/submit">
+        <h2 id="Notes">Notes</h2>
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" />
+        <label for="content">Content</label>
+        <textarea id="content" rows="3"></textarea>
+        <input type="submit" value="Submit" />
+        <p id="error"></p>
+        <a href="#" class="btn btn-primary notesBtn" target="_blank"
+          >My Saved Notes</a
+        >
+      </form>
+      <section id="notesList" class="container notesList">
+        <!-- Notes List here -->
+      </section>
+    </main>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -11,7 +11,12 @@ const motivationQu = [
     `"I find that the harder I work, the more luck I seem to have." –Thomas Jefferson`,
     `"Genius is 10% inspiration, 90% perspiration." —Thomas Edison`,
     `"Motivation is what gets you started. Habit is what keeps you going." –Jim Ryun`,
-    `"Success is the sum of small efforts, repeated." —R. Collier`
+    `"Success is the sum of small efforts, repeated." —R. Collier`,
+    `“Excellence is not a skill. It is an attitude.” —Ralph Marston`,
+    `“Quality is not an act, it is a habit.” —Aristotle`,
+    `“The best way to predict your future is to create it.” —Abraham Lincoln`,
+    `"Do the best you can until you know better. Then when you know better, do better.” —Maya Angelou`,
+    `“If you hear a voice within you say ‘you cannot paint,’ then by all means paint, and the voice will be silenced.” —Vincent Van Gogh`
 ];
 
 function selectRandomQuote() {
@@ -122,28 +127,3 @@ refreshButton2.addEventListener('click', function() {
     location.reload();
 });
 
-// Notes Form
-
-const form = document.getElementById ('notesForm');
-function handleFormSubmission(event) {
-    event.preventDefault();
-    const subject = document.getElementById('subject').value.trim();
-    const content = document.getElementById('content').value.trim();
-    const errorElement = document.getElementById('error');
-    if (!subject || !content) {
-        errorElement.textContent = "Please complete the form.";
-        return;
-    }
-    const userNote = {
-        subject: subject,
-        content: content
-    };
-    let userNotes = JSON.parse(localStorage.getItem('userNotes')) || [];
-        userNotes.push(userNote);
-        localStorage.setItem('userNotes',JSON.stringify(userNotes));
-    redirectPage();
-}
-function redirectPage() {
-    window.location.href = 'content.html';
-}
-form.addEventListener('submit', handleFormSubmission);

@@ -36,7 +36,7 @@ header {
     font-size: 40px;
     font-family: "Merienda";
     font-weight: 700;
-    cursor: default;
+    cursor: pointer;
     text-shadow: 4px 4px 4px rgba(110, 117, 124, 0.5);
     animation-name: brandName;
     animation-duration: 2s;
@@ -110,61 +110,6 @@ header {
 
 .quoteBackground {
     background-color: hsl(0, 0%, 48%);
-}
-
-.dojo-bg-container>img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 750px;
-    text-align: center;
-    position: relative;
-    filter: blur(3px);
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
-}
-
-.dojo-bg-container .center {
-    position: absolute;
-    display: inline;
-    z-index: 998;
-    top: 210px;
-    left: 214.7px;
-    font-family: "Protest Revolution";
-    font-size: 10vw;
-    color: #dabd19;
-    text-shadow: 12px 12px 12px var(--black);
-    white-space: nowrap;
-    animation: 3s invis;
-}
-
-.dojo-bg-container .center-info {
-    position: absolute;
-    display: inline;
-    z-index: 998;
-    top: 460px;
-    left: 20px;
-    font-family: "Merienda";
-    font-size: 3.1vw;
-    transform: scale(0.8);
-    color: #dabd19;
-    text-shadow: 4px 4px 4px var(--black);
-    animation: 6s invis;
-    text-align: center;
-    margin: 0 50px;
-    backdrop-filter: blur(50px);
-    border-radius: 20px;
-    box-shadow: 3px 3px 3px black;
-}
-
-.center-info span {
-    color: #f15152;
-    animation: 3s invisNoteNinja 5s;
-    font-size: 3.2vw;
-}
-
-@keyframes invis {
-    from {opacity: 0;}
-    to {opacity: 1;}
 }
 
 /* Modal */
@@ -357,156 +302,267 @@ body {
     background-color: #202327;
 }
 
-/* Cards */
+/* Flashcards */
 
-/* Test Cards */
-
-.toolCards {
-    margin: 10px 5px 0 -5px;
-    transform: scale(0.95);
-    font-family: "Spectral";
-}
-
-.card-img-overlay {
-    font-size: 15px;
-    font-weight: 600;
-    margin: 5px;
-    text-shadow: 2px 2px 2px var(--black);
-    backdrop-filter: blur(3px);
-    border-radius: 50px;
+/* Add Flashcard button section */
+.flashcards-container {
+    width: 48vw;
+    max-width: 62.5em;
+    position: relative;
+    top: 800px;
+    left: 40px;
+    background-color: var(--grey);
+    border-radius: 20px;
     box-shadow: 3px 3px 3px black;
 }
 
-.flashcardsCard {
-    height: 310px;
-    width: 465px;
-    font-size: 15px;
-    border-radius: 50px;
+.add-flashcard-con {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 1.2em 1em;
 }
 
-.flashcardsCard>img {
-    border-radius: 50px;
-    /*filter: blur(2px);*/
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
-}
-
-.notesCard {
-    height: 310px;
-    width: 465px;
-    font-size: 15px;
-    border-radius: 50px;
-}
-
-.notesCard>img {
-    border-radius: 50px;
-    /*filter: blur(2px);*/
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
-}
-
-#notes-test {
-    transform: translate(0px, -50px);
-    transform: scale(0.8);
-}
-
-.timerCard {
-    height: 310px;
-    width: 465px;
-    font-size: 15px;
-    border-radius: 50px;
-}
-
-.timerCard>img {
-    border-radius: 50px;
-    /*filter: blur(2px);*/
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
-}
-
-/**/
-
-.ourCard {
-    background-color: var(--red);
-    padding: 2%;
-}
-
-
-input[type=submit] {
-    padding: 1rem;
+button {
+    border: none;
+    outline: none;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: var(--dark);
-    color: var(--light);
-  }
+}
 
-input[type=submit]:active {
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
-    background-color: var(--dark-accent);
-  }
-  
-input[type=submit]:hover {
-    border-style: inset;
-    background-color: var(--dark-accent-action);
-  }
-  
-input,
-textarea {
-    border-radius: 4px;
-    border-width: 1px;
-    font-size: 1rem;
-    background-color: var(--light-accent);
-  }
+.add-flashcard-con button {
+    font-size: 1em;
+    background-color: #f15152;
+    border: 3px outset rgba(193, 63, 63, 0.5);
+    font-family: "Spectral";
+    color: var(--grey);
+    padding: 0.8em 1.2em;
+    font-weight: 500;
+    border-radius: 0.4em;
+}
+
+.add-flashcard-con button:hover {
+    background-color: #d64747;
+    border: 3px outset #d8494980;
+}
+
+.add-flashcard-con button:active {
+    background-color: #c54141!important;
+    border: 3px outset hsl(0, 51%, 50%)!important;
+}
+
+#card-con {
+    margin-top: 1em;
+}
+
+/* Input info section */
+.question-con {
+    width: 90vw;
+    max-width: 34em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--grey);
+    position: relative;
+    top: 1228px;
+    left: 40px;
+    padding: 3em 2em;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.question-con h2 {
+    font-size: 2.2em;
+    color: var(--black);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.error-con {
+    align-self: center;
+    transform: translate(0px, 0px);
+    color: var(--red)
+}
 
 #error {
-    color: var(--error);
-    opacity: .75;
-    position: absolute;
-    bottom: -2rem;
-  }
-
-
-.card-container {
-    display: flex; /* Use flexbox */
-    flex-direction: row; /* Align items in a row */
-    justify-content: space-between; /* Optional: space between cards */
+    color: var(--red);
+    font-weight: 400;
 }
 
+.wrapper button {
+    font-size: 1.4em;
+    background-color: var(--red);
+    height: 1.8em;
+    width: 1.8em;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    justify-self: flex-end;
+}
+
+.wrapper button:active, .wrapper button:focus {
+    border: none!important;
+    box-shadow: none;
+    border-radius: 50%;
+}
+
+label {
+    color: var(--black);
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.7em 0.5em;
+    border: 1px solid hsl(0, 0%, 59%);
+    outline: none;
+    color: #525252;
+    border-radius: 0.3em;
+    resize: none;
+}
+
+textarea:not(:last-child) {
+    margin-bottom: 1.2em;
+}
+
+textarea:focus {
+    border-color: var(--black);
+}
+
+#save-btn {
+    font-size: 1em;
+    background-color: var(--red);
+    color: var(--grey);
+    padding: 0.6em 0;
+    border-radius: 0.3em;
+    font-weight: 600;
+}
+
+.card-list-con {
+    display: grid;
+    padding: 0.2em;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 0.4em 1.2em black;
+    padding: 1.2em;
+    border-radius: 0.4em;
+}
+
+.question-div, .answer-div {
+    text-align: justify;
+}
+
+.question-div {
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color:#c54141;
+}
+
+.answer-div {
+    margin-top: 1em;
+    font-weight: 400;
+    color: grey;
+}
+
+.show-hide-btn {
+    display: block;
+    background-color: var(--red);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6em 0;
+    border-radius: 0.3em;
+}
+
+.buttons-con {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit, .delete {
+    background-color: transparent;
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+
+.edit {
+    color: var(--red);
+}
+
+.delete {
+    color: green;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .card-list-con {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 14px;
+    }
+    .card-list-con {
+        grid-template-columns: 1fr;
+        gap: 1.2em;
+    }
+}
+
+/* Notes */
+form, section {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1%;
+    margin: 2%;
+    width: 30%;
+
+  }
+
+form > *:not(label) {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+
+input[type="submit"] {
+    background-color: #171717;
+    color: grey;
+}
+.notesBtn {
+    background-color: #171717;
+    color: grey;
+    border: grey;
+}
+
+#Notes, #subject, #content {
+    color: black!important;
+}
+#Notes {
+    text-align: center;
+}
+  
 /* Media Queries */
 
 /* Tablets */
 @media (max-width: 768px) {
-    .dojo-bg-container>img {
-        width: 100%;
-    }
 
-    .dojo-bg-container .center {
-        left: 61px;
-        top: 185px;
-    }
-
-    .dojo-bg-container .center-info {
-        position: absolute;
-        display: inline;
-        z-index: 998;
-        top: 330px;
-        left: 20px;
-        font-family: "Merienda";
-        font-size: 2.8vw;
-        color: #dabd19;
-        text-shadow: 3px 3px 3px var(--black);
-        animation: 6s invis;
-        text-align: center;
-        margin: 0 50px;
-        backdrop-filter: blur(40px);
-        border-radius: 20px;
-        box-shadow: 3px 3px 3px black;
-        padding: 5px;
-    }
-    
-    .center-info span {
-        color: #f15152;
-        animation: 3s invisNoteNinja 5s;
-        font-size: 3.2vw;
-    }
 }
 
 /* Phone L */
@@ -530,77 +586,8 @@ textarea {
     #randomQuote {
         font-size: 10px;
     }
-
-    .dojo-bg-container>img {
-        top: 30px;
-    }
-
-    .dojo-bg-container .center {
-        top: 120px;
-        left: 33.5px;
-    }
-
-    .dojo-bg-container .center-info {
-        position: absolute;
-        display: inline;
-        z-index: 998;
-        top: 205px;
-        left: 20px;
-        font-family: "Merienda";
-        font-size: 2.1vw;
-        color: #dabd19;
-        text-shadow: 1px 1px 1px var(--black);
-        animation: 6s invis;
-        text-align: center;
-        margin: 0 50px;
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        box-shadow: 2px 2px 2px black;
-        padding: 5px;
-    }
-    
-    .center-info span {
-        color: #f15152;
-        animation: 3s invisNoteNinja 5s;
-        font-size: 2.6vw;
-    }
 }
 
 @media (max-width: 375px) {
-    .dojo-bg-container .center {
-        top: 110px;
-        left: 33.5px;
-        text-shadow: 12px 12px 30px black;
-    }
 
-    .dojo-bg-container .center-info {
-        position: absolute;
-        display: inline;
-        z-index: 998;
-        top: 185px;
-        left: 20px;
-        font-family: "Merienda";
-        font-size: 2vw;
-        color: #dabd19;
-        text-shadow: 1px 1px 1px var(--black);
-        animation: 6s invis;
-        text-align: center;
-        margin: 0 50px;
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        box-shadow: 2px 2px 2px black;
-        padding: 5px;
-    }
-    
-    .center-info span {
-        color: #f15152;
-        animation: 3s invisNoteNinja 5s;
-        font-size: 2.5vw;
-    }
-}
-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: lightgray;
-    color: black;
 }
