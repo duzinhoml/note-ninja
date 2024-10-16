@@ -350,11 +350,12 @@ input[type="submit"] {
     text-align: center;
 }
 
-#notesList {
+article {
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 1rem;
     background-color: white;
-    
-}
-
+  }
 /* Flashcards */
 
 /* Add Flashcard button section */
