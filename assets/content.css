@@ -544,10 +544,10 @@ textarea:focus {
 }
 
 .card {
-    background-color: white;
+    background-color: hsl(0, 0%, 90%);
     box-shadow: 0 0.4em 1.2em black;
     padding: 1.2em;
-    border-radius: 0.4em;
+    border-radius: 1em;
     transform: translate(0px, -10px);
     transform: scale(0.95);
 }
@@ -582,6 +582,7 @@ textarea:focus {
     font-family: "Spectral";
     text-shadow: 1px 1px 1px var(--black);
     border: 3px outset rgba(110, 117, 124, 0.5);
+    cursor: pointer;
 }
 
 .show-hide-btn:hover {
@@ -681,5 +682,3 @@ textarea:focus {
 }
 
 @media (max-width: 375px) {}
-
-/* Just a test, DELETE AFTER */
