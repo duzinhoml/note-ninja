@@ -132,7 +132,7 @@ header {
     box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
 }
 
-.dojo-bg-container .center {
+/*.dojo-bg-container .center {
     position: absolute;
     display: inline;
     z-index: 998;
@@ -144,9 +144,22 @@ header {
     text-shadow: 12px 12px 12px var(--black);
     white-space: nowrap;
     animation: 3s invis;
+}*/
+
+.dojo-bg-container .center {
+    font-family: "Protest Revolution";
+    font-size: 10vw;
+    color: #dabd19;
+    z-index: 1;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 12px 12px 12px var(--black);
+    animation: 3s invis;
 }
 
-.dojo-bg-container .center-info {
+/*.dojo-bg-container .center-info {
     position: absolute;
     display: inline;
     z-index: 998;
@@ -163,6 +176,22 @@ header {
     backdrop-filter: blur(50px);
     border-radius: 20px;
     box-shadow: 3px 3px 3px black;
+}*/
+
+.dojo-bg-container .center-info {
+    position: absolute;
+    z-index: 1;
+    font-family: "Merienda";
+    font-size: 3.1vw;
+    transform: scale(0.8);
+    color: #dabd19;
+    text-shadow: 4px 4px 4px var(--black);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
 }
 
 .center-info span {
@@ -497,156 +526,4 @@ footer {
     padding: 3px;
     background-color: lightgray;
     color: black;
-}
-
-/* Media Queries */
-
-/* Tablets */
-@media (max-width: 768px) {
-    .dojo-bg-container>img {
-        width: 100%;
-    }
-
-    .dojo-bg-container .center {
-        left: 114.5px;
-        top: 185px;
-    }
-
-    .dojo-bg-container .center-info {
-        position: absolute;
-        display: inline;
-        z-index: 998;
-        top: 330px;
-        left: 0px;
-        font-family: "Merienda";
-        font-size: 2.8vw;
-        color: #dabd19;
-        text-shadow: 3px 3px 3px var(--black);
-        animation: 6s invis;
-        text-align: center;
-        margin: 0 50px;
-        backdrop-filter: blur(40px);
-        border-radius: 20px;
-        box-shadow: 3px 3px 3px black;
-        padding: 5px;
-    }
-
-    .center-info span {
-        color: #f15152;
-        animation: 3s invisNoteNinja 5s;
-        font-size: 3.2vw;
-    }
-
-    .toolCards {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .card {
-        left: 65%;
-        margin-top: 20px;
-        transform: scale(1);
-    }
-
-    .card:last-child {
-        margin-bottom: px;
-    }
-}
-
-/* Phone L */
-@media (max-width: 425px) {
-    .logoText {
-        font-size: 30px;
-    }
-
-    .dropdown {
-        transform: scale(0.6);
-    }
-
-    .liText {
-        font-size: 15px;
-    }
-
-    .modal-btn {
-        font-size: 12px;
-    }
-
-    #randomQuote {
-        font-size: 10px;
-    }
-
-    .dojo-bg-container>img {
-        top: 30px;
-    }
-
-    .dojo-bg-container .center {
-        top: 120px;
-        left: 33.5px;
-    }
-
-    .dojo-bg-container .center-info {
-        position: absolute;
-        display: inline;
-        z-index: 998;
-        top: 205px;
-        left: 20px;
-        font-family: "Merienda";
-        font-size: 2.1vw;
-        color: #dabd19;
-        text-shadow: 1px 1px 1px var(--black);
-        animation: 6s invis;
-        text-align: center;
-        margin: 0 50px;
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        box-shadow: 2px 2px 2px black;
-        padding: 5px;
-    }
-
-    .center-info span {
-        color: #f15152;
-        animation: 3s invisNoteNinja 5s;
-        font-size: 2.6vw;
-    }
-}
-
-/* Phone M */
-@media (max-width: 375px) {
-    .dojo-bg-container .center {
-        top: 110px;
-        left: 33.5px;
-        text-shadow: 12px 12px 30px black;
-    }
-
-    .dojo-bg-container .center-info {
-        position: absolute;
-        display: inline;
-        z-index: 998;
-        top: 185px;
-        left: 20px;
-        font-family: "Merienda";
-        font-size: 2vw;
-        color: #dabd19;
-        text-shadow: 1px 1px 1px var(--black);
-        animation: 6s invis;
-        text-align: center;
-        margin: 0 50px;
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        box-shadow: 2px 2px 2px black;
-        padding: 5px;
-    }
-
-    .center-info span {
-        color: #f15152;
-        animation: 3s invisNoteNinja 5s;
-        font-size: 2.5vw;
-    }
-}
-
-@media (max-width: 320) {
-    .card {
-        position: absolute !important;
-    }
 }
