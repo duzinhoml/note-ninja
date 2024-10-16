@@ -41,6 +41,18 @@
           >
             <span class="navbar-toggler-icon dropdown-inside"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="#">Flashcards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="#Notes">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="content.html">Timer</a>
+              </li>
+            </ul>
             <!-- Modal Button in Nav -->
             <button
               type="button"
@@ -395,11 +407,13 @@
         <textarea id="content" rows="3"></textarea>
         <input type="submit" value="Submit" />
         <p id="error"></p>
-       
+        <a href="#" class="btn btn-primary notesBtn" target="_blank"
+          >My Saved Notes</a
+        >
       </form>
-       <!-- Notes List here -->
       <section id="notesList" class="container notesList">
-       </section>
+        <!-- Notes List here -->
+      </section>
 
       <!-- Offcanvas (right) -->
       <button
