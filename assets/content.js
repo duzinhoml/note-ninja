@@ -149,6 +149,11 @@ function handleFormSubmission(event) {
     userNotes.push(userNote);
     localStorage.setItem('userNotes', JSON.stringify(userNotes));
     renderNotesList();
+    redirectPage();
+}
+
+function redirectPage() {
+    window.location.href = '#notesList'
 }
 
 form.addEventListener('submit', handleFormSubmission);
@@ -174,9 +179,10 @@ function renderNotesList() {
     if (userNotes.length > 0) {
         userNotes.forEach(post => {
             const postElement = document.createElement('article');
-            postElement.innerHTML =
-                `<h2>${post.subject}</h2>
-                        <p>${post.content}</p>`;
+            postElement.innerHTML = `
+                <h2>${post.subject}</h2>
+                        <p>${post.content}</p>
+                        `;
             notesList.appendChild(postElement);
         });
     } else {
