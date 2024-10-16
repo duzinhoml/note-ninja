@@ -350,6 +350,11 @@ input[type="submit"] {
     text-align: center;
 }
 
+#notesList {
+    background-color: white;
+    
+}
+
 /* Flashcards */
 
 /* Add Flashcard button section */
