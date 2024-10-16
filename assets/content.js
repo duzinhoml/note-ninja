@@ -12,6 +12,19 @@ const addQuestion = document.getElementById('add-flashcard');
 const closeBtn = document.getElementById('close-btn');
 let editBool = false;
 
+// Local Storage
+let questionStored = JSON.parse(localStorage.getItem('questionStored')) || [];
+let answerStored = JSON.parse(localStorage.getItem('questionStored')) || [];
+
+function storeValue() {
+    let textareaQ = document.getElementById('question');
+    let question = textareaQ.value;
+    localStorage.setItem('questionKey', question);
+    let textareaA = document.getElementById('answer');
+    let answer = textareaA.value;
+    localStorage.setItem('answerKey', answer);
+}
+
 // Add question
 addQuestion.addEventListener('click', () => {
     container.classList.add('hide');
@@ -43,9 +56,14 @@ cardButton.addEventListener('click', (submitQuestion = () => {
     if (!tempQuestion || !tempAnswer) {
         errorMessage.classList.remove('hide');
     } else {
+        const questionInput = document.getElementById('question').value;
+        const answerInput = document.getElementById('answer').value;
+        questionStored.push(questionInput);
+        answerStored.push(answerInput);
         containerBg.classList.remove('hide');
         container.classList.remove('hide');
         errorMessage.classList.add('hide');
+        storeValue();
         viewlist();
         question.value = '';
         answer.value = '';
@@ -53,21 +71,32 @@ cardButton.addEventListener('click', (submitQuestion = () => {
 })
 );
 
+// Save Question & Answer to Local Storage
+document.getElementById('save-btn').addEventListener('click', function() {
+    localStorage.setItem('questionStored', JSON.stringify(questionStored));
+    localStorage.setItem('answerStored', JSON.stringify(answerStored));
+    });
+
+// NEEDS WORK ON //
 // Card Generator
 function viewlist() {
     let listCard = document.getElementsByClassName('card-list-con');
     let div = document.createElement('div');
     div.classList.add('card');
     // Question
-    div.innerHTML += `<p class='question-div'>${question.value}</p>`;
+    let storedQuestion = localStorage.getItem('questionKey');
+    div.innerHTML += `<p class='question-div'>${storedQuestion}</p>`;
     // Answer
+    let storedAnswer = localStorage.getItem('answerKey');
+    div.innerHTML += `<p class='answer-div'>${storedAnswer}</p>`;
+
     let displayAnswer = document.createElement('p');
     displayAnswer.classList.add('answer-div', 'hide');
     displayAnswer.innerText = answer.value;
 
     // Link to show/hide answer
     let link = document.createElement('a');
-    link.setAttribute('href', '#');
+    //link.setAttribute('href', '#');//
     link.setAttribute('class', 'show-hide-btn');
     link.innerHTML = 'Show/Hide';
     link.addEventListener('click', () => {
@@ -125,6 +154,10 @@ const disableButtons = (value) => {
     Array.from(editButtons).forEach(element => {
         element.disabled = value;
     });
+};
+
+window.onload = function() {
+    viewlist();
 };
 
 // Notes Form
