@@ -41,6 +41,18 @@
           >
             <span class="navbar-toggler-icon dropdown-inside"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="#">Flashcards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="#Notes">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText liText" href="content.html">Timer</a>
+              </li>
+            </ul>
             <!-- Modal Button in Nav -->
             <button
               type="button"
@@ -395,62 +407,75 @@
         <textarea id="content" rows="3"></textarea>
         <input type="submit" value="Submit" />
         <p id="error"></p>
-       
+        <a href="#" class="btn btn-primary notesBtn" target="_blank"
+          >My Saved Notes</a
+        >
       </form>
-       <!-- Notes List here -->
       <section id="notesList" class="container notesList">
-       </section>
+        <!-- Notes List here -->
+      </section>
 
-      <!-- Flashcards -->
-      <div class="flashcards-outline-con" id="flashcardsBg">
-        <div class="flashcards-container">
-          <div class="add-flashcard-con">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              id="add-flashcard"
-            >
-              Add Flashcard
-            </button>
-          </div>
+      <!-- Offcanvas (right) -->
+      <button
+        class="btn btn-primary"
+        id="btnOc"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling"
+      >
+        Timer
+      </button>
 
-          <div id="card-con">
-            <div class="card-list-con"></div>
-          </div>
+      <div
+        class="offcanvas offcanvas-end"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+            Study Timer
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
         </div>
-      </div>
-
-      <div class="questions-outline-con hide" id="questionsBg">
-        <div class="question-con hide" id="add-question-card">
-          <h2>Add Flashcard</h2>
-          <div class="wrapper">
-            <div class="error-con">
-              <span class="hide" id="errorFC"
-                >Input fields cannot be empty!</span
-              >
+        <div class="offcanvas-body">
+          <p>
+            Studying can be tiring. Organize your time and make sure to give
+            yourself rest!
+          </p>
+          <!-- Pomodoro Section Start -->
+          <div class="pomodoro-container">
+            <div class="section-container">
+              <button id="focus" class="btn-break btn-timer btn-focus">
+                Study
+              </button>
+              <button id="shortBreak" class="btn-break btn-shortbreak">
+                Short Break
+              </button>
+              <button id="longBreak" class="btn-break btn-longbreak">
+                Long Break
+              </button>
             </div>
-            <button
-              type="button"
-              class="btn-close"
-              aria-label="Close"
-              id="close-btn"
-            ></button>
+            <div class="time-btn-container">
+              <span id="time"></span>
+              <div class="btn-container">
+                <button id="btnStart" class="show">Start</button>
+                <button id="btnPause" class="hide">Pause</button>
+                <button id="btnReset" class="hide">
+                  <i class="fa-solid fa-rotate-right"></i>
+                </button>
+              </div>
+            </div>
           </div>
-
-          <label for="question">Question:</label>
-          <textarea
-            class="input"
-            id="question"
-            placeholder="Type the question here..."
-            rows="2"
-          ></textarea>
-          <label for="answer">Answer:</label>
-          <textarea
-            class="input"
-            id="answer"
-            rows="4"
-            placeholder="Type the answer here..."
-          ></textarea>
-          <button id="save-btn">Save</button>
+          <!-- Pomodoro End -->
         </div>
       </div>
     </main>
