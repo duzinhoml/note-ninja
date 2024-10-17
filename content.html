@@ -44,9 +44,6 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link navText liText" href="#">Flashcards</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link navText liText" href="#Notes">Notes</a>
               </li>
               <li class="nav-item">
@@ -67,11 +64,11 @@
       </nav>
       <!-- Motivational Quote -->
       <div class="container-fluid quoteBackground">
-        <p class="fade-in" id="randomQuote"></p>
+        <p class="fade-in text-center" id="randomQuote"></p>
       </div>
     </header>
 
-    <main class="bg-dark bg-gradient">
+ 
       <!-- Pop-Up Modal -->
       <div
         class="modal fade"
@@ -399,21 +396,28 @@
       </div>
 
       <!-- Notes -->
-      <form id="notesForm" action="/submit">
-        <h2 id="Notes">Notes</h2>
-        <label for="subject">Subject</label>
-        <input id="subject" type="text" />
-        <label for="content">Content</label>
-        <textarea id="content" rows="3"></textarea>
-        <input type="submit" value="Submit" />
-        <p id="error"></p>
-        <a href="#" class="btn btn-primary notesBtn" target="_blank"
-          >My Saved Notes</a
-        >
-      </form>
-      <section id="notesList" class="container notesList">
-        <!-- Notes List here -->
-      </section>
+
+      <main class="container">
+        
+        <div class="row">
+          <form class="col-8" id="notesForm" action="/submit">
+            <h2 id="Notes" class="text-center" style="color: red;">Notes</h2>
+            <label for="subject" style="color: red;">Subject</label>
+            <input id="subject" type="text" />
+            <label for="content" style="color: red;">Content</label>
+            <textarea id="content" rows="3"></textarea>
+            <input type="submit" style="color: red;" value="Submit" />
+            <p id="error"></p>
+          </form>
+        </div>
+
+      <div class="container">
+        <div class="row">
+          <section id="notesList" class="col-8 notesList">
+          </section>
+        </div>
+      </div>
+
 
       <!-- Offcanvas (right) -->
       <button

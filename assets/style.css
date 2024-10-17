@@ -4,20 +4,6 @@
     --red: #f15152;
 }
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-/* Header */
-
-/* header {
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-} */
-
 /* Nav Bar */
 
 .ourNav {
@@ -122,12 +108,6 @@
 }
 
 .dojo-bg-container>img {
-    /* width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 750px; */
-    /* text-align: top; */
-    /* position: relative; */
     filter: blur(3px);
     box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
 }
@@ -138,42 +118,27 @@
 }
 
 .center {
-    /* position: absolute;
-    display: inline;
-    z-index: 998;
-    top: 210px;
-    left: 211px; */
     font-family: "Protest Revolution";
     font-size: 10vw;
     color: #dabd19;
     text-shadow: 12px 12px 12px var(--black);
-    /* white-space: nowrap; */
     animation: 3s invis;
     
 }
 
 .dojo-bg-container .center-info {
-    /* position: absolute;
-    display: inline;
-    z-index: 998;
-    top: 460px;
-    left: 0px; */
     font-family: "Merienda";
     font-size: 3.1vw;
     transform: scale(0.8);
     color: #dabd19;
     text-shadow: 4px 4px 4px var(--black);
     animation: 6s invis;
-    text-align: center;
-    /* margin: 0 50px; */
     backdrop-filter: blur(50px);
     border-radius: 20px;
     box-shadow: 3px 3px 3px black;
-}*/
+}
 
 .dojo-bg-container .center-info {
-    position: absolute;
-    z-index: 1;
     font-family: "Merienda";
     font-size: 3.1vw;
     transform: scale(0.8);
@@ -182,9 +147,6 @@
     backdrop-filter: blur(50px);
     border-radius: 20px;
     box-shadow: 3px 3px 3px black;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -75%);
 }
 
 .center-info span {
@@ -401,20 +363,13 @@ body {
     text-shadow: 4px 4px 4px var(--black);
     font-family: "Merienda";
     font-size: 3.1vw;
-    /* display: flex;
-    justify-content: center;
-    margin: 60px 30px 20px; */
     backdrop-filter: blur(50px);
-    /* border-radius: 20px; */
     box-shadow: 3px 3px 3px black;
-    /* padding: 10px; */
     background-color: #171717;
     border-radius: 50px;
 }
 
 .toolCards {
-    /* margin: 10px 0px 30px;
-    transform: scale(0.95); */
     font-family: "Spectral";
     background-color: var(--black);
     backdrop-filter: blur(50px);
@@ -423,8 +378,6 @@ body {
 }
 
 .card-img-overlay {
-    /* font-size: 15px;
-    font-weight: 600; */
     text-shadow: 2px 2px 2px var(--black);
     backdrop-filter: blur(3px);
     border-radius: 50px;
@@ -432,13 +385,8 @@ body {
 }
 
 .card {
-    /* height: 310px;
-    width: 465px; */
-    /* font-size: 15px; */
     border-radius: 50px;
     transform: scale(0.9);
-    /* bottom: 12px;
-    left: -3px; */
     border: 5px solid var(--red);
 }
 
@@ -453,13 +401,10 @@ body {
 
 .card-text {
     color: black;
-    /* font-size: 17px; */
     text-shadow: none;
     backdrop-filter: blur(90px);
     border-radius: 5px;
-    /* box-shadow: 2px 2px 2px black; */
     text-shadow: 1px 1px 1px var(--grey);
-    /* font-weight: 700; */
     overflow: hidden; 
     white-space: nowrap; 
     text-overflow: ellipsis;
