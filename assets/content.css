@@ -350,9 +350,6 @@ input[type="submit"] {
     text-align: center;
 }
 
-<<<<<<< HEAD
-/* Offcanvas */
-=======
 article {
     border: 2px solid;
     border-radius: 4px;
@@ -360,7 +357,6 @@ article {
     background-color: white;
   }
 /* Flashcards */
->>>>>>> a7eefe837180b94e1f3d40609ed854e1adcaed4b
 
 .offcanvas {
     background-color: #282828;
