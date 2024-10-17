@@ -4,20 +4,6 @@
     --red: #f15152;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header */
-
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    top: 0px;
-}
 
 /* Nav Bar */
 
@@ -112,9 +98,7 @@ header {
     color: var(--black);
     font-size: 20px;
     font-style: italic;
-    text-align: center;
     border-radius: 5px;
-    margin-bottom: 0;
     font-family: "Spectral";
 }
 
@@ -340,23 +324,12 @@ input[type="submit"] {
     border: grey;
 }
 
-#Notes,
-#subject,
-#content {
-    color: black !important;
-}
-
-#Notes {
-    text-align: center;
-}
-
 article {
     border: 2px solid;
     border-radius: 4px;
-    padding: 1rem;
     background-color: white;
   }
-/* Flashcards */
+/* Timer */
 
 .offcanvas {
     background-color: #282828;
