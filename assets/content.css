@@ -56,15 +56,15 @@
 }
 
 .liText:hover {
-    color: rgba(216, 213, 219, 0.8);
+    color: rgba(216, 213, 219, 0.6);
 }
 
 .liText:focus {
-    color: var(--grey);
+    color: rgba(216, 213, 219, 0.6);
 }
 
 .liText:active {
-    color: hsla(270, 8%, 90%, 0.8)
+    color: rgba(216, 213, 219, 0.4);
 }
 
 .dropdown {
@@ -305,7 +305,10 @@ section {
     padding: 1%;
     margin: 2%;
     width: 30%;
-    transform: translateY(100px);
+    color: var(--red)!important;
+    font-family: "Merienda";
+    text-shadow: 3px 3px 3px var(--black);
+    font-weight: 500;
 }
 
 form>*:not(label) {
@@ -313,22 +316,66 @@ form>*:not(label) {
     padding: 0.5rem;
 }
 
-input[type="submit"] {
-    background-color: #171717;
-    color: grey;
+#subject, #content {
+    border: 2px solid #484848;
+    border-radius: 6px;
+    background-color: #6e6e6e;
+    padding: 10px;
+    color: hsl(0, 0%, 21%) !important;
+    text-shadow: none;
+    box-shadow: 3px 3px 3px black;
 }
 
-.notesBtn {
+#subject:hover, #content:hover {
+    background-color: hsl(0, 0%, 48%);
+    border: 2px solid hsl(0, 0%, 33%);
+}
+
+#subject:focus, #content:focus {
+    background-color: hsl(0, 0%, 58%);
+    box-shadow: 2px 2px 2px hsl(0, 0%, 28%), -2px -2px 2px hsl(0, 0%, 28%), 2px -2px 2px hsl(0, 0%, 28%), -2px 2px 2px hsl(0, 0%, 28%);
+    border: 2px solid hsl(0, 0%, 43%)!important;
+    outline: none;
+}
+
+#subject::placeholder, #content::placeholder {
+    color: hsl(0, 0%, 21%) !important;
+}
+
+input[type="submit"] {
     background-color: #171717;
-    color: grey;
-    border: grey;
+    color: var(--grey);
+    border-radius: 4px;
+    border: 2px outset black;
+}
+
+input[type="submit"]:hover {
+    background-color: hsl(0, 0%, 14%);
+    border: 2px outset hsl(0, 0%, 5%);
+}
+
+input[type="submit"]:active {
+    background-color: hsl(0, 0%, 19%);
+    border: 2px outset hsl(0, 0%, 10%);
 }
 
 article {
-    border: 2px solid;
-    border-radius: 4px;
-    background-color: white;
+    border: 2px outset #f15152;
+    border-radius: 6px;
+    background-color: hsl(0, 0%, 48%);
+    padding: 10px;
+    color: hsl(0, 0%, 21%) !important;
+    text-shadow: none;
   }
+
+article:hover {
+    background-color: hsl(0, 0%, 48%);
+    border: 2px solid hsl(0, 0%, 33%);
+}
+
+.subject-input::placeholder {
+    color: hsl(0, 0%, 16%) !important;
+}
 /* Timer */
 
 .offcanvas {
@@ -348,8 +395,22 @@ article {
 }
 
 #btnOc {
-    
+    background-color: transparent;
+    border: none;
 }
+
+#btnOc:hover {
+    color: rgba(216, 213, 219, 0.6);
+}
+
+#btnOc:focus {
+    color: rgba(216, 213, 219, 0.6);
+}
+
+#btnOc:active {
+    color: rgba(216, 213, 219, 0.4);
+}
+
 
 /* Pomodoro Timer */
 

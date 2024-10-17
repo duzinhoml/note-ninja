@@ -107,11 +107,6 @@
     background-color: hsl(0, 0%, 48%);
 }
 
-.dojo-bg-container>img {
-    filter: blur(3px);
-    box-shadow: 3px 3px 10px #111, -3px 3px 10px #111;
-}
-
 .dojo-bg-container {
     background-image: url(https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png);
     background-size: contain;
@@ -123,7 +118,6 @@
     color: #dabd19;
     text-shadow: 12px 12px 12px var(--black);
     animation: 3s invis;
-    
 }
 
 .dojo-bg-container .center-info {
@@ -133,17 +127,6 @@
     color: #dabd19;
     text-shadow: 4px 4px 4px var(--black);
     animation: 6s invis;
-    backdrop-filter: blur(50px);
-    border-radius: 20px;
-    box-shadow: 3px 3px 3px black;
-}
-
-.dojo-bg-container .center-info {
-    font-family: "Merienda";
-    font-size: 3.1vw;
-    transform: scale(0.8);
-    color: #dabd19;
-    text-shadow: 4px 4px 4px var(--black);
     backdrop-filter: blur(50px);
     border-radius: 20px;
     box-shadow: 3px 3px 3px black;
@@ -367,31 +350,36 @@ body {
     box-shadow: 3px 3px 3px black;
     background-color: #171717;
     border-radius: 50px;
+    margin-bottom:10px;
 }
 
 .toolCards {
-    font-family: "Spectral";
+    font-family: "Merienda";
+    font-weight: 700;
     background-color: var(--black);
     backdrop-filter: blur(50px);
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
+    transform: scale(0.93);
+    margin-bottom: 20px;
 }
 
 .card-img-overlay {
-    text-shadow: 2px 2px 2px var(--black);
+    text-shadow: 2px 2px 2px var(--grey);
     backdrop-filter: blur(3px);
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
+    margin-top: 5px;
 }
 
 .card {
     border-radius: 50px;
     transform: scale(0.9);
-    border: 5px solid var(--red);
+    border: 7px solid var(--red);
 }
 
 .card:hover {
-    transform: scale(1);
+    transform: scale(0.93);
 }
 
 .card>img {
@@ -400,18 +388,15 @@ body {
 }
 
 .card-text {
-    color: black;
-    text-shadow: none;
-    backdrop-filter: blur(90px);
-    border-radius: 5px;
-    text-shadow: 1px 1px 1px var(--grey);
-    overflow: hidden; 
+    color: var(--black);
     white-space: nowrap; 
     text-overflow: ellipsis;
+    font-size: 22px;
 }
 
 .card-title {
-    color: black;
+    color: var(--black);
+    font-size: 40px;
 }
 
 /* Footer */
