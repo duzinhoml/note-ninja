@@ -95,7 +95,7 @@
 
 #randomQuote {
     color: var(--black);
-    font-size: 20px;
+    font-size: 1.8vw;
     font-style: italic;
     text-align: center;
     border-radius: 5px;
@@ -360,8 +360,6 @@ body {
     backdrop-filter: blur(50px);
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
-    transform: scale(0.93);
-    margin-bottom: 20px;
 }
 
 .card-img-overlay {
@@ -369,7 +367,6 @@ body {
     backdrop-filter: blur(3px);
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
-    margin-top: 5px;
 }
 
 .card {
@@ -389,14 +386,14 @@ body {
 
 .card-text {
     color: var(--black);
-    white-space: nowrap; 
+    white-space: wrap; 
     text-overflow: ellipsis;
-    font-size: 22px;
+    font-size: 2vw;
 }
 
 .card-title {
     color: var(--black);
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 /* Footer */
