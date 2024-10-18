@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="./assets/content.css" />
   </head>
   <body class="bg-dark bg-gradient">
-    <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg bg-body-secondary ourNav">
         <div class="container-fluid">
@@ -48,7 +47,7 @@
               </li>
               <li class="nav-item">
                 <button
-                  class="btn navText nav-link"
+                  class="btn navText timer nav-link"
                   id="btnOc"
                   type="button"
                   data-bs-toggle="offcanvas"
@@ -59,7 +58,6 @@
                 </button>
               </li>
             </ul>
-            <!-- Modal Button in Nav -->
             <button
               type="button"
               class="btn btn-primary modal-btn"
@@ -71,13 +69,10 @@
           </div>
         </div>
       </nav>
-      <!-- Motivational Quote -->
       <div class="container-fluid quoteBackground">
         <p class="fade-in text-center" id="randomQuote"></p>
       </div>
     </header>
-
-    <!-- Pop-Up Modal -->
     <div
       class="modal fade"
       id="mainModal"
@@ -123,7 +118,6 @@
         </div>
       </div>
     </div>
-    <!-- Options Modal -->
     <div
       class="modal fade"
       id="optionsModal"
@@ -188,7 +182,6 @@
         </div>
       </div>
     </div>
-    <!-- Subjects Confirmation Modal -->
     <div
       class="modal fade"
       id="confirmModal"
@@ -233,7 +226,6 @@
         </div>
       </div>
     </div>
-    <!-- Data Saved: Confirmed Modal -->
     <div
       class="modal fade"
       id="confirmDataSaveModal"
@@ -276,7 +268,6 @@
         </div>
       </div>
     </div>
-    <!-- Random Subject Modal -->
     <div
       class="modal fade"
       id="randomSubjectModal"
@@ -321,7 +312,6 @@
         </div>
       </div>
     </div>
-    <!-- View Saved Data Modal -->
     <div
       class="modal fade"
       id="viewSavedDataModal"
@@ -366,7 +356,6 @@
         </div>
       </div>
     </div>
-    <!-- Clear Saved Data Modal -->
     <div
       class="modal fade"
       id="clearDataModal"
@@ -403,8 +392,6 @@
       </div>
     </div>
 
-    <!-- Notes -->
-
     <main class="container">
       <div class="row">
         <form class="col-8" id="notesForm" action="/submit">
@@ -428,7 +415,6 @@
         </div>
       </div>
 
-      <!-- Offcanvas (right) -->
       <div
         class="offcanvas offcanvas-end"
         data-bs-scroll="true"
@@ -453,7 +439,7 @@
             Studying can be tiring. Organize your time and make sure to give
             yourself rest!
           </p>
-          <!-- Pomodoro Section Start -->
+       
           <div class="pomodoro-container">
             <div class="section-container">
               <button id="focus" class="btn-break btn-timer btn-focus">
@@ -477,7 +463,6 @@
               </div>
             </div>
           </div>
-          <!-- Pomodoro End -->
         </div>
       </div>
     </main>

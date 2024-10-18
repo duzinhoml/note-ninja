@@ -1,4 +1,3 @@
-// Notes Form
 
 const form = document.getElementById('notesForm');
 function handleFormSubmission(event) {
@@ -29,7 +28,7 @@ function redirectPage() {
 
 form.addEventListener('submit', handleFormSubmission);
 
-// Notes List
+
 const sectionElement = document.querySelector('section');
 function createAndAppendElement() {
     const newArticle = document.createElement('article');
@@ -62,7 +61,6 @@ function renderNotesList() {
 }
 renderNotesList();
 
-// Pomodoro Timer
 
 let focusButton = document.getElementById('focus');
 let buttons = document.querySelectorAll('.btn-break');

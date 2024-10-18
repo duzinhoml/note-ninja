@@ -4,9 +4,6 @@
     --red: #f15152;
 }
 
-
-/* Nav Bar */
-
 .ourNav {
     background-color: var(--black) !important;
 }
@@ -19,6 +16,11 @@
     text-shadow: 3px 3px 3px rgba(110, 117, 124, 0.5);
 }
 
+.timer {
+    color:white;
+    background-image: url(https://newrelic.com/sites/default/files/styles/16x9_1800w/public/2021-04/pomodoro-timer.webp?h=a68e76a0&itok=HXkzJW1-);
+    background-size: contain;
+}
 .logoText {
     font-size: 40px;
     font-family: "Merienda";
@@ -77,8 +79,6 @@
     border: 3px solid rgba(33, 33, 33, 0.6)
 }
 
-/* Motivational Quote */
-
 .fade-in {
     opacity: 0;
     animation: fadeIn 10s forwards;
@@ -106,9 +106,6 @@
     background-color: hsl(0, 0%, 48%);
 }
 
-/* Modal */
-
-/* Modal Button in Nav */
 .modal-btn {
     color: var(--black);
     background-color: #dabd19;
@@ -131,7 +128,6 @@
     border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
-/* Modal Pop-Up */
 .modal-bg {
     background-color: #292929;
 }
@@ -248,7 +244,6 @@
     border: 3px outset hsl(166, 60%, 42%) !important;
 }
 
-/* Subject Input */
 .subject-input {
     background-color: #6e6e6e;
     border: 1px solid #484848;
@@ -291,13 +286,10 @@
     border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
-/* Body */
-
 body {
     background-color: #202327;
 }
 
-/* Notes */
 form,
 section {
     display: flex;
@@ -376,7 +368,6 @@ article:hover {
 .subject-input::placeholder {
     color: hsl(0, 0%, 16%) !important;
 }
-/* Timer */
 
 .offcanvas {
     background-color: #282828;
@@ -411,8 +402,6 @@ article:hover {
     color: rgba(216, 213, 219, 0.4);
 }
 
-
-/* Pomodoro Timer */
 
 .pomodoro-container {
     background-color: hsl(0, 0%, 19%);
