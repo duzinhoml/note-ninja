@@ -386,8 +386,13 @@ body {
 }
 
 footer {
-    text-align: center;
+    text-align: left;
     padding: 3px;
     background-color: lightgray;
     color: black;
+}
+
+.brand-title {
+    font-family: "Merienda";
+    color: var(--red);
 }
