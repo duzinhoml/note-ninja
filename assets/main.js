@@ -1,5 +1,3 @@
-// Quote Generator
-
 const motivationQu = [
     `"The beautiful thing about learning is that no one can take it away from you." —B.B. King`,
     `"The mind is not a vessel to be filled but a fire to be ignited." —Plutarch`,
@@ -29,11 +27,9 @@ selectRandomQuote();
 
 setInterval(selectRandomQuote, 86400000);
 
-// Subject Generator
 
 let subjects = JSON.parse(localStorage.getItem('subjects')) || [];
 
-// Adding subject from input field
 document.getElementById('addSubjectBtn').addEventListener('click', function() {
     const subjectInput = document.getElementById('modalSubjectInput').value;
     if (subjectInput) {
@@ -70,14 +66,12 @@ function placeholderRevert() {
     });
 }
 
-// Confirm and save subjects to local storage
 document.getElementById('confirmBtn').addEventListener('click', function() {
     localStorage.setItem('subjects', JSON.stringify(subjects));
     $('#confirmModal').modal('hide');
     $('#confirmDataSaveModal').modal('show');
 });
 
-// Getting a random subject from saved data
 function getRandomSubject() {
     if (subjects.length > 1) {
         const randomIndex = Math.floor(Math.random() * subjects.length);
@@ -87,7 +81,6 @@ function getRandomSubject() {
     }
 }
 
-// Displaying random subject
 document.getElementById('getRandomSubjectBtn').addEventListener('click', function() {
     const randomSubject = getRandomSubject();
 
@@ -96,7 +89,6 @@ document.getElementById('getRandomSubjectBtn').addEventListener('click', functio
     $('#randomSubjectModal').modal('show');
 });
 
-// View Saved Data
 document.getElementById('viewDataBtn').onclick = function() {
 
     const savedData = localStorage.getItem('subjects');
@@ -109,14 +101,12 @@ document.getElementById('viewDataBtn').onclick = function() {
     $('#viewSavedDataModal').modal('show');
 };
 
-// Clear Saved Data
 document.getElementById('clearDataBtn').addEventListener('click', function() {
     localStorage.removeItem('subjects');
     $('#optionsModal').modal('hide');
     $('#clearDataModal').modal('show');
 });
 
-// Refresh page
 const refreshButton = document.getElementById("refreshBtn");
 refreshButton.addEventListener('click', function() {
     location.reload();

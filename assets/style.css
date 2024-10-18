@@ -4,8 +4,6 @@
     --red: #f15152;
 }
 
-/* Nav Bar */
-
 .ourNav {
     background-color: var(--black) !important;
 }
@@ -75,8 +73,6 @@
     background-color: rgba(81, 81, 81, 0.6);
     border: 3px solid rgba(33, 33, 33, 0.6)
 }
-
-/* Motivational Quote */
 
 .fade-in {
     opacity: 0;
@@ -148,9 +144,6 @@
     }
 }
 
-/* Modal */
-
-/* Modal Button in Nav */
 .modal-btn {
     color: var(--black);
     background-color: #dabd19;
@@ -173,7 +166,6 @@
     border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
-/* Modal Pop-Up */
 .modal-bg {
     background-color: #292929;
 }
@@ -290,7 +282,6 @@
     border: 3px outset hsl(166, 60%, 42%) !important;
 }
 
-/* Subject Input */
 .subject-input {
     background-color: #6e6e6e;
     border: 1px solid #484848;
@@ -333,13 +324,9 @@
     border: 3px outset rgba(187, 162, 19, 1) !important;
 }
 
-/* Body */
-
 body {
     background-color: #202327;
 }
-
-/* Cards */
 
 .study-tools {
     color: #dabd19;
@@ -395,8 +382,6 @@ body {
     color: var(--black);
     font-size: 3vw;
 }
-
-/* Footer */
 
 footer {
     text-align: center;
