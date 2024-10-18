@@ -14,20 +14,7 @@
     font-family: "Merienda";
     cursor: pointer;
     text-shadow: 3px 3px 3px rgba(110, 117, 124, 0.5);
-}
-
-.timer {
-    color:var(--grey);
-    background-image: url(/images/pomodoro-timer.webp);
-    background-size: contain;
-}
-
-.timer:hover {
-    opacity: 0.8;
-}
-
-.timer:active {
-    opacity: 0.6;
+    margin-left: 3px;
 }
 
 .logoText {
@@ -76,6 +63,25 @@
 
 .liText:active {
     color: rgba(216, 213, 219, 0.4);
+}
+
+.notes {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.timer {
+    color:var(--grey);
+    background-image: url(/images/pomodoro-timer.webp);
+    background-size: contain;
+}
+
+.timer:hover {
+    opacity: 0.8;
+}
+
+.timer:active {
+    opacity: 0.6;
 }
 
 .dropdown {
