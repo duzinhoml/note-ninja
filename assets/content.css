@@ -10,19 +10,15 @@
 
 .navText {
     color: var(--grey);
-    font-size: 20px;
+    font-size: 1.4vw;
     font-family: "Merienda";
     cursor: pointer;
     text-shadow: 3px 3px 3px rgba(110, 117, 124, 0.5);
+    margin-left: 3px;
 }
 
-.timer {
-    color:white;
-    background-image: url(https://newrelic.com/sites/default/files/styles/16x9_1800w/public/2021-04/pomodoro-timer.webp?h=a68e76a0&itok=HXkzJW1-);
-    background-size: contain;
-}
 .logoText {
-    font-size: 40px;
+    font-size: 2.8vw;
     font-family: "Merienda";
     font-weight: 700;
     cursor: pointer;
@@ -69,9 +65,29 @@
     color: rgba(216, 213, 219, 0.4);
 }
 
+.notes {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.timer {
+    color:var(--grey);
+    background-image: url(/images/pomodoro-timer.webp);
+    background-size: contain;
+}
+
+.timer:hover {
+    opacity: 0.8;
+}
+
+.timer:active {
+    opacity: 0.6;
+}
+
 .dropdown {
     background-color: rgba(81, 81, 81, 0.8);
     border: 3px solid rgba(50, 50, 50, 0.804);
+    font-size: 1.4vw;
 }
 
 .dropdown:hover {
@@ -114,6 +130,7 @@
     box-shadow: 2px 2px 2px hsl(0, 0%, 28%), -2px -2px 2px hsl(0, 0%, 28%), 2px -2px 2px hsl(0, 0%, 28%), -2px 2px 2px hsl(0, 0%, 28%);
     font-family: "Merienda";
     font-weight: 700;
+    font-size: 1.4vw;
 }
 
 .modal-btn:hover {
