@@ -10,14 +10,14 @@
 
 .navText {
     color: var(--grey);
-    font-size: 20px;
+    font-size: 1.4vw;
     font-family: "Merienda";
     cursor: pointer;
     text-shadow: 3px 3px 3px rgba(110, 117, 124, 0.5);
 }
 
 .logoText {
-    font-size: 40px;
+    font-size: 2.8vw;
     font-family: "Merienda";
     font-weight: 700;
     cursor: default;
@@ -67,6 +67,7 @@
 .dropdown {
     background-color: rgba(81, 81, 81, 0.8);
     border: 3px solid rgba(50, 50, 50, 0.804);
+    font-size: 1.4vw;
 }
 
 .dropdown:hover {
@@ -104,7 +105,7 @@
 }
 
 .dojo-bg-container {
-    background-image: url(https://static.vecteezy.com/system/resources/previews/000/149/153/original/dojo-vector-illustration.png);
+    background-image: url(/images/dojo-bg.webp);
     background-size: contain;
 }
 
@@ -130,7 +131,6 @@
 
 .center-info span {
     color: #f15152;
-    animation: 3s invisNoteNinja 5s;
     font-size: 3.2vw;
 }
 
@@ -152,6 +152,7 @@
     box-shadow: 2px 2px 2px hsl(0, 0%, 28%), -2px -2px 2px hsl(0, 0%, 28%), 2px -2px 2px hsl(0, 0%, 28%), -2px 2px 2px hsl(0, 0%, 28%);
     font-family: "Merienda";
     font-weight: 700;
+    font-size: 1.4vw;
 }
 
 .modal-btn:hover {
@@ -337,7 +338,7 @@ body {
     box-shadow: 3px 3px 3px black;
     background-color: #171717;
     border-radius: 50px;
-    margin-bottom:10px;
+    margin-top: 6.8vh;
 }
 
 .toolCards {
@@ -347,6 +348,7 @@ body {
     backdrop-filter: blur(50px);
     border-radius: 50px;
     box-shadow: 3px 3px 3px black;
+    transform: scale(0.93);
 }
 
 .card-img-overlay {
@@ -384,8 +386,13 @@ body {
 }
 
 footer {
-    text-align: center;
+    text-align: left;
     padding: 3px;
     background-color: lightgray;
     color: black;
+}
+
+.brand-title {
+    font-family: "Merienda";
+    color: var(--red);
 }
