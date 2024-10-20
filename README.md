@@ -8,28 +8,27 @@ Our motivation was to help others study by creating a site that is easily access
 
 - What did you learn? -->
 
-<!-- ## Table of Contents
+## User Story 
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+As a student, I want access to a study page so that I can use interactive study tools to better organize my notes and study time 
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license) -->
+## Acceptance Criteria 
+
+Given the user navigates to the study page
+When the user selects the notes section
+Then the system permits the user to enter subject and content and save their notes
+
+Given the user wants to do a timed study session 
+When the user selects the timer button 
+Then the system allows the user to start a study timer of 25 minutes with the possibility of short and long breaks 
 
 ## Installation
 
-<!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
+N/A
 
 ## Usage
 
-<!-- Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ``` -->
+N/A
 
 ## Credits
 
@@ -40,10 +39,6 @@ Milushka Pujol-Ellis, GitHub: https://github.com/Milu305
 Angela Guilmain, GitHub: https://github.com/aguilm
 Jennifer Buehrle, GitHub: https://github.com/Jenn1313
 
-<!-- If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well. -->
-
 ## License
 
-<!-- The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/). -->
+N/A
