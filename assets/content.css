@@ -545,14 +545,29 @@ article:hover {
     display: block;
 }
 
-.footer {
-    text-align: left;
+footer {
     padding: 3px;
     background-color: lightgray;
-    color: black!important;
+    color: var(--black);
+    font-family: "Spectral";
 }
 
 .brand-title {
     font-family: "Merienda";
     color: var(--red);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+    border-bottom: 2px double var(--red);
+    font-size: 1.25vw;
+    padding: 5px;
+}
+
+footer a:hover {
+    background-color: hsla(0, 0%, 9%, 0.1);
+    border-radius: 5px;
+    padding: 5px;
 }
